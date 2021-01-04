@@ -1,0 +1,106 @@
+1.关于盒子宽度下列正确的是（D）
+
+(A) 盒子宽：就是width的大小
+
+(B) 盒子宽： padding-left + width + padding-right 
+
+(C) 盒子宽： border-left + width + border-right 
+
+(D) 盒子宽： border-left+ padding-left + width + padding-right + border-right
+
+
+2.关于盒子高度下列正确的是（D）
+
+(A) 盒子高：就是height的大小
+
+(B) 盒子高：padding-top +height + padding-bottom 
+
+(C) 盒子高：border-top + height + border-bottom
+
+(D) 盒子高：border-top + padding-top +height + padding-bottom + border-bottom
+
+3关于根据下列代码计算 盒子宽高下列说法正确的是（B）
+
+		div {
+
+​			width: 200px;
+
+​			height: 200px;
+
+​			border: 1px solid #000000;
+
+​			border-top: 5px solid blue;
+
+​			padding: 50px;
+
+​			padding-left: 100px;
+
+​		}
+
+(A) 宽度为200px 高度为200px
+
+(B) 宽度为352px 高度为306px
+
+(C) 宽度为302px 高度为307px
+
+(D) 宽度为302px 高度为252px
+
+
+4.外边距合并及解决方案
+	外边距塌陷只需要给一个盒子设置margin上下值就可以了
+5.用公式写两个列子
+  /*外盒尺寸计算（元素空间尺寸）*/
+  Element空间高度 = content height + padding + border + margin
+			200px+100px+50px+2px+0px=352px
+  Element 空间宽度 = content width + padding + border + margin
+  /*内盒尺寸计算（元素实际大小）*/
+  Element Height = content height + padding + border （Height为内容高度）
+			200px+100px+50px+20px+2px=352px
+  Element Width = content width + padding + border （Width为内容宽度）
+
+6.什么是浮动？以及清除浮动的方法（4种）
+是浮动脱离标准流，按照指定方向发生移动，遇到父级元素的边界或者相邻元素（同为浮动元素）才会停止
+1.给父元素设置高度
+2.在父元素的最后位置添加一个元素设置clear：both
+3.单伪元素清除浮动：
+	.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+	visibility: hiddle;
+	}
+	.cleartfix {
+	*zoom: 1;
+	}
+4.双伪元素清除浮动
+	.clearfix::brfore,.clearfix::after {
+		content:"";
+		display:table;
+	}
+	.clearfix::after {
+		clear: both;
+	}
+	.clearfix {
+		*zoom：1；
+	}
+7.定位都有哪些，以及各自的特点
+static：默认（无定位）
+relative：相对定位，根据自己原来的位置进行定位
+absolute：绝对定位，根据文档树上距离自己最近的定位过的元素进行定位，如果没有就会在页面文档进行定位
+fixed：固定定位，根据浏览器可视化窗口进行定位
+
+8元素的显示与隐藏（display 、visibility、overflow）的特点？
+display：元素彻底消失
+visibility：使元素不可见但是依然占据位置
+overflow：元素内容超出隐藏
+
+9.单行出现省略号与多行出现省略号的方法？
+单行文字出现省略号：
+	white-space：normal；
+	overflow：hidden；
+	text-overflow：ellipsis；
+多行文本出现省略号：
+	overflow：hidden；
+	word-break：break-all；
+	-webkit-box-orient：vertical；
+	display：-webkit-box；

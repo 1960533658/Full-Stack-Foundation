@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 例如101中没有3；103中有一个3；133中有两个3。你要做的是统计出101到200之间的整数一共有多少个3。
+        var one = 0, two = 0, three = 0, cont = 0;
+        for (var i = 101; i <= 200; i++) {
+            one = i%100%10;
+            three = parseInt(i/100);
+            two = (i-one-three*100)/10;
+            if (one==3||two==3||three==3) {
+                cont++
+                if (one==two) {
+                    cont++;
+                }
+            }
+        }
+            document.write(cont);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

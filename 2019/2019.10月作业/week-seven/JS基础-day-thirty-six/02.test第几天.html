@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 判断这是这一年的那一天
+        var year = prompt('请输入年份') - 0;
+        var month = prompt('请输入月份') - 0;
+        var day = prompt('请输入日期') - 0;
+        var days = day;
+        for (let i = 1; i < month; i++) {
+            if (month > 12 || day > 31) {
+                days = 0
+                break;
+            }
+            if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10) {
+                days += 31;
+            };
+            if (i == 4 || i == 6 || i == 9 || i == 11) {
+                days += 30;
+            }
+            if (i == 2) {
+
+                if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                    days += 29
+                } else {
+                    days += 28
+                }
+            }
+        }
+        alert('这是' + year + "的第" + days + '天');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

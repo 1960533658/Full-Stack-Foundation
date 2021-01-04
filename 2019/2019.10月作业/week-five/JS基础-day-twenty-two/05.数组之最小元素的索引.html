@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 求出数组var arr= [1,2,4,5,10,100,2,-22]中最小元素的索引，如果这
+        // 样的元素个数大于1，则返回索引最小的数的索引
+
+        //定义数组
+        var arr = [1, 2, 4, 5, 10, 100, 2, -22];
+        //双循环遍历这个数组用以每个值比较
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = 0; j < arr.length - i - 1; j++) {
+                //判断最小值
+                if (arr[j] < arr[j + 1]) {
+                    //交换值
+                    var a = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = a;
+                }
+            }
+        }
+        //查找最小值的索引
+        var min_indexOf = arr.indexOf(arr[arr.length - 1]);
+        // 最小数的个数大于一就返回索引
+        if (min_indexOf > 1) {
+            console.log(min_indexOf)
+        }
+        else {
+            // 返回索引
+            console.log(min_indexOf);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

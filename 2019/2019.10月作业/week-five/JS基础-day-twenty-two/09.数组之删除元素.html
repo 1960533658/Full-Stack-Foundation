@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 9. 有一个数组，var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
+        // 要求如下:
+        //    1.从第 0 位开始删除 1 个元素，插入"parrot"、"anemone"和"blue"
+        //    2.从第 2 位开始删除 2 个元素
+        //    3.从第 1 位开始删除 0 个元素，插入“drum” 和 "guitar"
+
+        //定义数组
+        var myFish = ['angel', 'clown', 'trumpet', 'sturgeon']
+        //从第 0 位开始删除 1 个元素，插入"parrot"、"anemone"和"blue"
+        myFish.splice(0, 1, "parrot", "anemone", "blue");
+        // 打印
+        console.log(myFish);
+        //从第 2 位开始删除 2 个元素
+        myFish.splice(2, 2)
+        //打印
+        console.log(myFish);
+        //从第 1 位开始删除 0 个元素，插入“drum” 和 "guitar"
+        myFish.splice(1, 0, 'drum', 'guitar');
+        // 打印
+        console.log(myFish);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

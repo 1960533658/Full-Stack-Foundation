@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 6.var arr = ['张三'，'李四'，‘王五’]
+        // 要求，将数组中的每一个数据拼接在一起，每个数据之间用 |
+        // 符合拼接。 如：‘张三|李四|王五
+
+        //分析:定义数组,空字符串
+        var arr = ['张三', '李四', '王五'],str = '';
+        遍历数组
+        for (var i = 0; i < arr.length; i++) {
+            //判断索引
+            if (i == 0 || i == 1) {
+                // 拼接|
+                arr[i] += '|'
+            }
+            // 拼接名字
+            str += arr[i];
+        }
+        //打印
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

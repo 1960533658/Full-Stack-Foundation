@@ -1,0 +1,19 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 现在布局 无论PC还是移动 */
+
+* {
+    box-sizing: border-box;
+}
+
+/* 因为logo是不会变化的,所以i标签是不会更换图片的 */
+
+.sprites {
+    background-image: url(../images/jd-sprites.png);
+    background-size: 200px 200px;
+}

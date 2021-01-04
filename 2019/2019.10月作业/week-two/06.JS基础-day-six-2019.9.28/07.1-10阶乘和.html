@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var sum = 0;
+        //十的循环
+        //外部循环代表是哪个数的循环
+        for (var i = 1; i <= 10; i++) {//1
+            //j循环结束,进入i循环就会重新
+            //刷新,因为var会重新定义10次,乘积不可以累加
+            var cheng = 1;
+            //内部是计算当前数的阶乘的循环
+            for (var j = 1; j <= i; j++) {//j=1
+                cheng = cheng * j//chneg=1  2   6   24  120 720 5040
+            }
+            //sum要在第二个循环下面才可以正确执行
+            //他是积的总和循环结束会被更改所以要写在下面
+            sum = sum + cheng//1+2
+
+        }
+        alert(sum)
+
+        // for (var i = 1; i <= 10; i++) {//1
+        //     //j循环结束,进入i循环就会重新
+        //     //刷新,因为var会重新定义10次,乘积不可以累加
+        //     // var cheng = 1;
+        //     // //内部是计算当前数的阶乘的循环
+        //         cheng = cheng * i//chneg=1  2   6   24  120 720 5040
+            
+        //     //sum要在第二个循环下面才可以正确执行
+        //     //他是积的总和循环结束会被更改所以要写在下面
+        //     sum = sum + cheng//1+2
+
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

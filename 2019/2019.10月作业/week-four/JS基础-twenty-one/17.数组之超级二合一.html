@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // var arr1 = [1, 2, 3, "aaa", "hello", 999, -1];
+        // var arr2 = [3, 78, "aaa", "bbb", 99, 1, -1, "hello"];
+        // 要求，把两个数组共同的元素放入一个新的数组, 并返回新的数组
+        //分析:定义两个数组和一个空数组
+        //双循环比较每个值,就是让外部的每一个值都可以和arr2所有内容比较
+        //判断他们是否相等,相等的话就让他们任意一个加入新数组
+        //最后打印
+
+        //定义两个比较数组和一个空数组
+        var arr1 = [1, 2, 3, "aaa", "hello", 999, -1];
+        var arr2 = [3, 78, "aaa", "bbb", 99, 1, -1, "hello"];
+        var arr3 = [];
+        //循环比较
+        for(var i = 0; i < arr1.length; i++) {
+            for(var j = 0; j < arr2.length; j++) {
+                //判断相等
+                if (arr1[i] == arr2[j]) {
+                    //添加到后面
+                    arr3.push(arr1[i])
+                }
+            }
+        }
+        //打印
+        console.log(arr3)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

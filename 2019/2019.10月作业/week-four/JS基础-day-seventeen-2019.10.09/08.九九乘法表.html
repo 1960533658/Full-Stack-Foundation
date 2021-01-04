@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //打印九九乘法表
+        //分析
+        //1.外部代表行内部代表列
+        //ij都是1-9
+
+        //定义外部列循环
+        for (var i = 1; i <= 9; i++) {
+            // 定义字符串作为相加,让其一行显示
+            var str = "";
+            //定义内部行循环
+
+            for (var j = 1; j <= i; j++) {
+                // 拼接字符串形成久久乘法表
+                str += j + 'x' + i + '=' + j * i + ' ';
+            }
+            console.log(str);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 去掉字符串两端和中间的空格，var str = '   ab  cd    ';
+        // var str = '   ab  cd    ';
+        // let str1 = "";
+        //方法1:不使用方法
+        //遍历字符串
+        // for (let i = 0; i < str.length; i++) {
+        //     //判断每一个是不是空字符串
+        //     if (str[i] != ' ') {
+        //         // 修改空字符串
+        //         str1 += str[i]
+        //     }
+        // }
+        // //打印str
+        // console.log(str1)
+
+        //方法2:trim()方法(可以split直接拆分字符串转成数组,之后数组直接遍历删除空英号.最后数组join方法传入空英号为参数,返回去除空格后的字符串)
+        var str = '   ab  cd    ';
+        //去除字符串两端空格
+        str = str.trim()
+        //split()方法截取字符串返回数组
+        str = str.split(' ')
+        //使用数组方法删除空字符串(因为要考虑不知道字符串之间还会不会有字符串,所以遍历找到所有的''删除)
+        for (let i = 1; i <= str.length; i++) {
+            if (str[i] == '') {
+                //删除所有的空英号
+                str.splice(i, 1)
+            }
+        }
+        //转字符串
+        str = str.join('')
+        console.log(str)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

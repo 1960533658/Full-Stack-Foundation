@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 35.	找出1-99之间是7的倍数或者个位数字是7或者是十位数字是7的数字，在控制台打印输出
+        for(var i = 1;i<=99;i++) {
+            var ge = 0;
+            var two = 0;
+            ge = i%10;
+            two = (i-ge)/10
+            if (ge>0) {
+                if (i%7==0||two==7||i==70) {
+                    document.write(i+'<br />')
+                }
+                
+            }
+        }        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

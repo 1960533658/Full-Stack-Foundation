@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 利用JavaScript完成如下功能：给出一个数判断是属于小数还是整数，如：var a= 3.14输出：3.14是小数 
+        //分析:
+        //      1.判断是整数与还是小数直接取整(parseint),
+        //      2.让其和原数值相比较,相等就是整数,不等就是小数
+
+        //定义一个变量
+        var num = 3.32
+        //给num取整与原数值比较相等就是整数
+        if (parseInt(num) == num) {
+            console.log("这个数是整数");
+
+        //与原数值比较bu不相等就是小数
+        } else {
+            console.log("这个数是小数");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

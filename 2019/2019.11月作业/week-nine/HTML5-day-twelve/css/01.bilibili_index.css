@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+    display: table;
+    content: "";
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    width: 100%;
+}
+
+/* 一周年庆开始 */
+.anniversary {
+    font-size        : 0;
+    position         : relative;
+    height           : 180px;
+    width            : 100%;
+    background       : skyblue;
+    background-image : url('../images/anniversary.png');
+    background-repeat: no-repeat;
+    background-size  : cover;
+}
+
+.ccc {
+    position    : absolute;
+    left        : 0;
+    top         : 0;
+    width       : 100%;
+    height      : 43px;
+    padding-left: 28px;
+    background  : hsla(0, 0%, 100%, 0.4);
+}
+
+.search {
+    /* width : 2048px; */
+    margin   : 10px auto;
+}
+
+.search-left li {
+    float       : left;
+    padding-left: 14px;
+}
+
+.search-left li a {
+    font-size: 16px;
+    color    : skyblue;
+}
+
+.input {
+    position   : absolute;
+    left       : 50%;
+    top        : 15px;
+    margin-left: -225px;
+    margin-top : -10px;
+}
+
+.input input {
+    width                    : 450px;
+    height                   : 30px;
+    background               : skybluefff;
+    padding-left             : 20px;
+    border                   : 0;
+    border-top-left-radius   : 2px;
+    border-bottom-left-radius: 2px;
+    font-size                : 16px;
+}
+
+.input span {
+    display                   : inline-block;
+    width                     : 40px;
+    height                    : 30px;
+    vertical-align            : top;
+    background                : #e7e7e7;
+    border-top-right-radius   : 2px;
+    border-bottom-right-radius: 2px;
+    text-align                : center;
+    font-size                 : 16px;
+    line-height               : 32px;
+    color                     : #505050;
+}
+
+.input span:hover {
+    color: rgb(0, 161, 214);
+}
+
+
+/* 登录 开始 */
+.search-right li {
+    float       : left;
+    font-size   : 16px;
+    margin-right: 14px;
+    line-height : 36px;
+}
+
+.search-right li a {
+    color: skyblue;
+}
+
+.search-right li:first-child img {
+    width        : 36px;
+    height       : 36px;
+    border-radius: 50%;
+
+}
+
+.search-right li:last-child {
+    width        : 100px;
+    height       : 40px;
+    border-radius: 2px;
+    margin-right : 25px;
+    background   : #fb7299;
+    text-align   : center;
+    line-height  : 40px;
+}
+
+/* 登录 结束 */
+/* 一周年庆结束 */

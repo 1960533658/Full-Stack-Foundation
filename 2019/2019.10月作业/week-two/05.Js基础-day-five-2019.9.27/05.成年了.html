@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 提示用户输入年龄，若用户的年龄大于等于18岁，则弹出“恭喜您，您已经成年”，否则以弹出框的方式提示用户年龄太小。
+        // 分析:
+        //      1.年龄判断是否大于18
+        //      2.大于打印,文字,小于打印文字
+
+        //prompt是用户输入框,返回可能是字符串,有时候需要转类型
+        var user = prompt('请输入年龄');
+        //比较
+        if (user>+18) {
+            alert('恭喜您，您已经成年');
+        //未成年
+        }else {
+            alert('你就是个弟弟');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 录入一个三位数，按逆序打印出各位数字。例如原数字为321，应输出123。
+        var user = parseInt(prompt('请输入一个三位数逆打印'))//用户输入的值接受了
+        var hund;//百位的变量
+        var ten;//十位数
+        var one;//个位数
+        var sum;//反过来时的百位数
+        //检测是否是一个三位数
+        if (user /100 < 10 && user / 100 > 0) {
+            //因为通过取余来让三位数可以暂时变成个位数,因为没给三位数赋值所以百位数没有变化
+            one = user %100%10;
+            //十位数先取余一百变成十位数,再减去刚刚获取的个位数除以10,就得到了十位数
+            ten = (user%100-one)/10;
+            //减去个位数,ten乘以10变成了十位数,让三位数变成了整百的数/100的到十位数
+            hund = (user-one-ten*10)/100;
+            //准备逆转,个位变百位
+            sum = one*100+ten*10+hund
+            console.log(sum)
+        } else {    //防止不是一个三位数
+            alert(user + '不是一个三位数')
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

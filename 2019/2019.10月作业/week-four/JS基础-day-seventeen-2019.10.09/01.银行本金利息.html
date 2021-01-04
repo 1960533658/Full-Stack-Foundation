@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+        // 分析:
+        // 需要一个循环执行五次
+        //每次循环都需要计算利息并加上上一年的本金
+        //定义一个初始变量10000本金,一个常量为0.0003利息
+        //声明两个变量为本金和利息
+        var money = 10000, li = 0.0003;
+        for (var i = 0; i < 5; i++) {
+            //  本金 = 本金+ 本金*利率
+            money = money + money * li;
+        }
+        console.log(money);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

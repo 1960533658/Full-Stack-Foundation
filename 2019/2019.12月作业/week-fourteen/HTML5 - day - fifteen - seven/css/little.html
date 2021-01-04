@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .little {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            background-color: skyblue;
+        }
+
+        .little span {
+            position: absolute;
+            display: inline-block;
+            left: 50%;
+            top: 50%;
+            width: 2px;
+            height: 10px;
+            margin-left: -1px;
+            margin-top: -5px;
+            background-color: #ccc;
+            border-radius: 1px;
+        }
+
+        .little span:first-child {
+            transform: rotate(-30deg);
+            transform-origin: bottom center;
+        }
+
+        .little :last-child {
+            transform: translate(-1px, 0px);
+            transform: rotate(30deg);
+            transform-origin: bottom center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="little">
+        <span></span>
+        <span></span>
+    </div>
+</body>
+
+</html>

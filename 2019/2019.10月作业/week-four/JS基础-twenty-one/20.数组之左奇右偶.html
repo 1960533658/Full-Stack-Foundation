@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 10个整数的数组[26,67,49,38,52,66,7,71,56,87],元素重新排列，所有的奇数保存到数组左边，所有的偶数保存到数组右边。
+        //分析:
+            //遍历这个数组判断这个值是不是偶数
+            //是就删除并截取这个数字并添加进这个数组的后面
+            //不是就删除并截取这个数字并添加进这个数组的前面
+
+        //定义数组
+        var arr = [26,67,49,38,52,66,7,71,56,87];
+        // 遍历这个数组
+        for(var i = 0; i < arr.length; i++) {
+            // 判断这个数组的每个值是不是偶数
+            if (arr[i]%2==0) {
+                // 是就删除并截取这个数字并添加进这个数组的后面
+                var arr2 = arr.splice(i,1);
+                arr.push(arr2[0])
+            }else{
+                不是就删除并截取这个数字并添加进这个数组的前面
+                var arr2 = arr.splice(i,1);
+                arr.unshift(arr2[0]) 
+            }
+        }
+        console.log(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

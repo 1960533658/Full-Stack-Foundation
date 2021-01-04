@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .鸡兔同笼：鸡和兔子一共35只，笼子里一
+        // 共有94只脚，用程序计算出鸡和兔子分别多少只
+        // var chicken = 0, rabbit = 0;//个数
+        //外部循环代表鸡的个数
+        var head = parseInt(prompt('请输入多少个头'))
+        var foot = parseInt(prompt('请输入多少只脚'))
+        for(var i = 1; i<head; i++) {
+            // 内部循环代表兔的个数
+            for(var j =1;j<head;j++) {
+                if(i+j==head&&i*2+j*4==foot) {
+                    //弹出鸡兔各多少只
+                    alert('鸡:'+i+'只,'+'兔:'+j+'只')
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        // for(var i = 1; i<35; i++) {
+        //     // 内部循环代表兔的个数
+        //     for(var j =1;j<35;j++) {
+        //         if(i+j==35&&i*2+j*4==94) {
+        //             //弹出鸡兔各多少只
+        //             alert('鸡:'+i+'只,'+'兔:'+j+'只')
+        //         }
+        //     }
+        // }
+        
+        //2.鸡有i只,兔子有35-i;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

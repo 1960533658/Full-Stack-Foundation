@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .素质教育（把分数变成ABCDE),A是>=90的分数，B是80-90的分数，以此类推，
+        // 千万不要写100个case哟,分数需要接收用户输入的
+        //分析:
+            //根据switch判断语句的特性只能是判断式只能是固定的值,而分数中每10分是一个标准,即取十位来判断标准
+        var test = parseInt((prompt('请输入分数') - 0)/10);
+        switch (test) {
+            case 9:
+                alert('A')
+                break;
+            case 8:
+                alert('B')
+                break;
+            case 7:
+                alert('C')
+                break;
+            case 6:
+                alert('D')
+                break;
+            default:
+                alert('E')
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

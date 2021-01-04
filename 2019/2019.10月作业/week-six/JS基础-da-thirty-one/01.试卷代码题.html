@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //         一、选择题
+        //         1、不属于js的基本数据类型的是()
+        //         A、null   B、float   C、string     D、number
+        //         2、以下哪个值放在if中被隐式类转换后不会变成false()
+        //         A、数字 - 1   B、数字0    C、null   D、空字符串
+        //         3、以下程序运行结果正确的是()
+        //         var i = 10;
+        //         i++;
+        //         console.log(i);
+        //         var y = i++;
+        //         console.log(y);
+        //         y = ++i;
+        //         console.log(y)
+        //         y += 10;
+        //         console.log(y)
+        //         A、10 11 13 23
+        //         B、11 11 13 23
+        //         C、10 12 13 23
+        //         D、11 12 13 23
+        //         4、以下程序运行结束正确的是() ：
+        //         var a = 3;
+        //         var b = 4;
+        //         var c = 5;
+        //         console.log(a > b && c > b || a < c);
+        //         A.1  B.true  C.false   D.报错
+        //         5、以下程序运行结束正确的是() ：
+        //         var a = 3;
+        //         var b = 4;
+        //         var c = 5;
+        //         console.log(a > b ? a : c);
+        //         A.3  B.4   C.5   D.报错
+        //         6、以下程序运行结束正确的是() ：
+        //         var str1 = null;
+        //         var str2 = false;
+        //         console.log(str1 === str2 ? "相等" : "不相等");
+        //         A.相等   B.不相等  C.true   D.false
+        //         7、以下对方法的解释错误的是
+        //         A、 pop：数组尾部删除
+        //         B、 unshift：数组头部删除
+        //         C、 push：数组后面添加元素
+        //         D、 join：将数组转成字符串
+        //         8、以下代码运行结果输出()
+        //         var a = [1, 2, 3]
+        //         alert(a.join())
+        //         A、123    B、1, 2, 3   C、 1  2  3    D、[1, 2, 3]
+        //         9、在JS中，‘1555‘+3的运行结果是（）
+        //         A、1558    B、1552     C、15553     D、1553
+        //         10、if…else语句的if和else两个句子里的代码同时被执行吗 ? ()
+        //  A、可以，因为条件是并立的
+        //         B、不可以，因为两个条件不同
+        //         11、表达式‘200’=== 200的值为（）
+        //         A、true   B、false   C、 0      D、1
+        //         12、关于JavaScript变量的生命周期，下面说法是错误的是（）
+        //         A、JavaScript的变量的生命周期都是从其声明开始
+        //         B、全局变量和局部变量的声明周期是一样长的
+        //         C、局部变量在函数执行完成后就会被删除
+        //         D、全局变量在脚本执行完成后（页面关闭）会被删除
+        //         13、下列语句中，（）语句是根据表达式的值进行匹配，然后执行其中的一个语句块。如果找不到匹配项，则执行默认语句块
+        //         A、switch   B、if-else C、for    D、字符串运算符
+        //         14、增加一个新值到数组的最后，下面哪一个选项是正确的？（）
+        //         A、arr[value] = length; B、arr[arr.length()] = value;
+        //         C、arr[arr.length] = value  D、arr.lenght = value;
+        //         15、数组var arr = [‘a’, ’b’, ’c’, ’d’, ’e’]; arr.slice(2, 4); alert(arr) ，弹框应弹出（）
+        //         A、b, d, c   B、c, d   C、c, d, e    D、a, b, c, d, e
+        //         16、下列JavaScript的循环语句中, 正确的是()
+        //         A、if (i < 10; i++) B、for (i = 0; i < 10)
+        //             C、for i = 1 to 10     D、for (i = 0; i <= 10; i++)
+        //             17、for (x = 0; x < 5; x++) {
+        //                 var y = x * x;
+        //                 console.log(y)
+        //             }
+        //         输出的结果为()
+        //         A、 0, 1, 2, 3, 4           B、0, 1, 4, 9, 16
+        //         C、0, 1, 9, 4, 16           D、以上答案都不对
+        //         18、数组下标出界，将返回（）
+        //         A、缺省值，如0          B、给浏览器回报错误
+        //         C、数组中第一个数或最后一个数     D、undefined
+        //         19、看以下JavaScript程序
+        //         var num;
+        //         num = 5 + true;
+        //         问：执行以上程序，number的值为（）
+        //         A、true     B、false
+        //         C、5         D、6
+        //         20、在JavaScript中运行下面的代码后的返回值是（）
+        //         var num = 10;
+        //         num = 20;
+        //         function getOK(num) {
+        //             var num = 30;
+        //             alert(num);
+
+        //         }
+        //         alert(num);
+        //         getOK();
+        //         A、20, 30  B、10, 30  C、 20, 40    D、 10, 40
+        //         二、简答题
+        //         1、js数据类型有哪些？怎么判断一个变量的数据类型？
+        //         2、列举数组的5个方法，并且说明每个方法的作用？
+        //         3、== 和 === 的区别是什么？console.log(1 == “1”)和console.log(1 === fasle)的结果是什么，并解释为什么？
+        //         4、break和continue区别是什么？
+        //         5、逻辑运算符有哪些，分别有哪些规则 ?
+        //             6、定义函数的三种方式是什么 ?
+        //                 7、定义对象的三种方式是什么 ?
+        //                     8、数据类型转换涉及的转换是哪些，分别有什么方式实现转换？
+        //         9、null和undefined的区别是什么？
+        //         10、let和var的区别是什么 ?
+        //             三、编程题
+        //         1、例如101中没有4；104中有一个4；144中有两个4。你要做的是统计出101到200之间的整数一共有多少个4。
+        //         2、封装函数，实现数组去重，var arr = [9, 10, 6, 6, 1, 9, 3, 5, 6, 4]
+        //         3、定义一个四位数，按逆序打印出各位数字。例如原数字为5678，应输出8765。
+        //         4、封装一个函数，实现数组var arr = [23, 45, 78, 98, 13, 89, 5]，从大到小排序。
+        //         5、求300到400所有不能被3整除的整数的第一个大于2000的和。
+        //选择题答案：
+        //
+        //D， 16、D， 17、B， 18、D， 19、D， 20、B
+        //简答题：
+        //1、
+        //Number、String、Boolean、Null、Undefined、Object
+        //typeof 变量名
+        //2、
+        //push()：把值添加到数组的后面
+        //unshift()：把值添加到数组的前面
+        //splice()：最多三个参数第一个参数是从数组的第几个下标开始（start index），第二个参数是截取从开始下标的第几个数（endlenght）
+        //第三个参数代表要替换的内容，修改长度截取数字并返回数组
+        //slice(): 两个参数，第一个参数是从数组的第几个下标开始（start index），第二个参数是截取到下标为当前参数的作为下标的数字
+        //返回复制出来的数字，原数组不变
+        //3、
+        //3.1==只比较值，不考虑数据类型
+        //===比较值和数据类型
+        //3.2因为==只比较值1==1，打印true
+        //3.3===比较值和数据类型首先1和false不可以直接比较会先把数字转成布尔值，true，二者不相等打印false
+        //4、 遇到break会直接停止训环，遇到continue会结束本次循环，开始下次循环
+        //5、>,<,>=.<=,==,===,!=,!==
+        //>：判断左边的值是否大于右边的值，是就返回true，不是就返回false
+        //<：判断左边的值是否小于右边的值，是就返回true，不是就返回false
+        //>=：判断左边的值是否大于等于右边的值，是就返回true，不是就返回false
+        //<=：判断左边的值是否小于等于右边的值，是就返回true，不是就返回false
+        //==：判断左边的值是否等于右边的值不考虑数据类型，是就返回true，不是就返回false
+        //===：判断左边的值和数据类型是否等于右边的值和数据类型，是就返回true，不是就返回false
+        //!=：判断左边的值是否不等于右边的值不考虑数据类型，是就返回true，不是就返回false
+        //!==：判断左边的值和数据类型是否不等于右边的值和数据类型，是就返回true，不是就返回false
+        //6、
+        //6.1字面量创建函数
+        //6.2new关键字创建函数
+        //6.3自调用函数
+        //7、
+        //7.1字面量创建对象
+        //7.2工厂模式创建对象
+        //7.3自定义构造函数创建对象
+        //8、String、Boolean转Number ：Number(变量名)
+        //   String、Number转Boolean ：Boolean(变量名)
+        //   Number、Boolean转String ：String(变量名)
+        //9、undefined：是变量只定义未赋值
+        //   null：用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。
+        // let count = 0;
+        // for (let i = 100; i <= 200; i++) {
+        //     let gw = i % 10;
+        //     let sw = (i % 100 - gw) / 10;
+        //     let bw = parseInt(i / 100);
+        //     if (gw == 4) {
+        //         count++;
+        //     }
+        //     if (sw == 4) {
+        //         count++;
+        //     }
+        //     if (bw == 4) {
+        //         count++;
+        //     }
+        // }
+        // console.log(count)
+
+        //数组去重
+        // let arr = [9, 10, 6, 6, 1, 9, 3, 5, 6, 4];
+        // let arr2 = [];
+        // for (var i = 0; i < arr.length; i++) {
+        //     var flag = true;
+        //     for (var j = 0; j < arr2.length; j++) {
+        //         if (arr[i] == arr[j]) {
+        //             flag = false;
+        //         }
+        //     }
+        //     if (flag) {
+        //         arr2[arr2.length] = arr[i];
+        //     }
+        // }
+        // console.log(arr2)
+
+        //逆序打印四位数
+        // var num = 1234;
+        // var gw = num % 10;
+        // var sw = (num % 100 - gw) / 10;
+        // var bw = (num % 1000 - gw - sw * 10) / 100;
+        // var ww = parseInt(num / 1000)
+        // console.log(gw + '' + sw + "" + bw + "" + ww);
+
+        //冒泡从大到小
+        // var arr = [23, 45, 78, 98, 13, 89, 5]
+        // for (var i = 1; i < arr.length; i++) {
+        //     for (var j = 0; j < arr.length - i; j++) {
+        //         if (arr[j] < arr[j + 1]) {
+        //             var temp = arr[j];
+        //             arr[j] = arr[j + 1]
+        //             arr[j + 1] = temp
+        //         }
+        //     }
+        // }
+        // document.write(arr)
+
+        // 求300到400所有不能被3整除的整数的第一个大于2000的和。
+        // let sum = 0;
+        // for (let i = 300; i <= 400; i++) {
+        //     if (sum >= 2000) {
+        //         break;
+        //     }
+        //     if (i % 3 != 0) {
+        //         sum += i;
+        //     }
+
+        // }
+        // console.log(sum);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

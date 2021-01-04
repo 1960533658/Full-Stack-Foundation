@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 定义一个人的对象，有name,age,gender,height等属性，
+        // 要求：1)获取name的值
+        // 2)	通过2种方式给对象添加一个新的属性weight,值自己写
+        // 3)	删除属性名height
+        var people = {
+            name = '小明',
+            age = 12,
+            gender = '男',
+            height = 110
+        }
+        people.weight1 = '未知';
+        // people['weight2'] ='还是未知'; 
+        delete people.height;
+        alert(people.name)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 补全函数完成功能，传入数组中找到任意3个数字(数字不能重复使用)的和是10的倍数，将所有组合打印下来
+
+        // function printSumIs10MoM(arr) {
+
+        // }
+        // 测试用例1：
+        // var arr = [10, 2, 3, 4, 6];
+        // printSumIs10MoM(arr);
+        // 结果1：
+
+        // 测试用例2：
+        // var arr = [10, 2, 8, 4, 6];
+        // printSumIs10MoM(arr);
+
+        var arr1 = [10, 2, 3, 4, 6];
+        function printSumIs10MoM(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    for (var k = j + 1; k < arr.length; k++) {
+                        if (arr[i] != arr[j] && arr[i] != arr[k] && arr[j] != arr[k]) {
+                            if ((arr[i] + arr[j] + arr[k]) % 10 == 0) {
+                                console.log(arr[i], arr[j], arr[k])
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        console.log(printSumIs10MoM(arr1));
+
+
+        //2.第二个数组
+        var arr2 = [10, 2, 8, 4, 6];
+        function printSumIs10MoM(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = i + 1; j < arr.length; j++) {
+                    for (var k = j + 1; k < arr.length; k++) {
+                        if (arr[i] != arr[j] && arr[i] != arr[k] && arr[j] != arr[k]) {
+                            if ((arr[i] + arr[j] + arr[k]) % 10 == 0) {
+                                console.log(arr[i], arr[j], arr[k])
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        console.log(printSumIs10MoM(arr2));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

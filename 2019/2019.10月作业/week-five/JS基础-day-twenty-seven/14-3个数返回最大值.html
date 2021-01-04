@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        10.写一个函数, 用户输入任意3个数的大小，返回最大值
+        */
+        // 调用函数
+        document.write(`最大值是:${getMaxNum(7,11,9)}`);
+
+        function getMaxNum(a, b, c) {
+            // 分析:
+            // 创建一个变量来储存变量值
+            var max = 0;
+
+            if (a > b && a > c) {
+                max = a;
+            } else if (b > a && b > c) {
+                max = b;
+            } else if (c > a && c > b) {
+                max = c;
+            }
+            return max;
+
+        }
+    </script>
+</body>
+
+</html>

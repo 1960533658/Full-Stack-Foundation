@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    //     获取当前时间，判断今年是否为闰年。两种方法判断 
+    //      1）判断今年是否为闰年；  能被400整除 或 被4整除但不能被100整除
+    //分析:
+    //      1.书写闰年的判断式是的话就弹出闰年,不是就弹出不是
+
+    //用户输入框获取年份
+    var year = prompt('请输入年');
+    //判断是否符合表达式
+    if(year%4==0||year%400==0&&year%100!=0) {
+        alert('今年是闰年');
+    //不能就弹出不是
+    }else{
+        alert('今年不是闰年')
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

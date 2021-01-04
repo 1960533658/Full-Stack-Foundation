@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            /*清除默认内外边距*/
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            /*清除li默认符号*/
+            list-style: none;
+        }
+
+        a {
+            /*清除默认下划线*/
+            text-decoration: none;
+        }
+
+        h4,
+        h5 {
+            /*清除默认加粗*/
+            font-weight: 400;
+        }
+
+        body {
+            background-color: #666;
+        }
+
+        .wrapper {
+            width: 1226px;
+            height: 614px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+        }
+
+        .hot {
+            float: left;
+        }
+
+        .pro {
+            float: right;
+            /*.pro大盒子不设置宽度,会被内容撑宽,撑宽的宽度和版心的宽度一样了,会掉下来,解决方案就是给他设置宽度,宽度和左边浮动大盒子的宽度相加,小于等于版心的宽度*/
+            width: 978px;
+        }
+
+        .hot img {
+            height: 614px;
+        }
+
+        .pro li {
+            float: left;
+            width: 234px;
+            height: 300px;
+            background-color: #fff;
+            margin-right: 14px;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        /*将第4个和第8个右外边距设置为0*/
+        .pro .mr0 {
+            margin-right: 0;
+        }
+
+        .pro img {
+            width: 150px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .pro h4 {
+            height: 24px;
+            font-size: 14px;
+        }
+
+        .pro h4 a {
+            color: #333;
+
+        }
+
+        .pro h5 {
+            height: 30px;
+            color: #b0b0b0;
+            font-size: 12px;
+        }
+
+        .pro p {
+            font-size: 14px;
+            color: #ff6700;
+        }
+
+        .phone {
+            float: left;
+            font-size: 32px;
+            line-height: 72px;
+            padding-left: 20px;
+            font-weight: 100;
+        }
+
+        .look {
+            float: right;
+            font-size: 24px;
+            line-height: 72px;
+            padding-right: 20px;
+            font-weight: 100;
+        }
+
+        body .wrapper:nth-child(1) {
+            height: 72px;
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="phone">手机</div>
+        <div class="look">查看全部</div>
+    </div>
+    <!-- 版心 -->
+    <div class="wrapper">
+        <!-- hot 热点 左边-->
+        <div class="hot">
+            <a href="#">
+                <img src="./images/left.jpg" alt="">
+            </a>
+        </div>
+        <!-- pro 产品 右边-->
+        <div class="pro">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./images/right-1.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/right-2.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/right-3.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+                <li class="mr0">
+                    <a href="#">
+                        <img src="./images/right-4.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/right-1.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/right-2.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/right-3.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+                <li class="mr0">
+                    <a href="#">
+                        <img src="./images/right-4.jpg" alt="">
+                    </a>
+                    <h4>
+                        <a href="#">小米9 6GB+128GB</a>
+                    </h4>
+                    <h5>骁龙855，索尼4800万超广角微距三摄</h5>
+                    <p>2999元</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

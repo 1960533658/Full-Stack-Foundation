@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Shop(id,name, price, sum, money) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.sum = sum;
+            this.money = money;
+        }
+        var he = new Shop(090115,'榴莲', 15.5, 22, 341.00);
+        var Qyi = new Shop(090028,'苹果', 6.5, 'kg', 880.00);
+        var bing = new Shop(090027,'猕猴桃', 32, 'kg', 348.00);
+        console.log(he.name, he.price, he.sum)
+        console.log('('+he.id+')'+'='+he.money)
+        console.log(Qyi.name, Qyi.price, Qyi.sum,)
+        console.log('('+Qyi.id+')'+'='+Qyi.money)
+
+        console.log(bing.name, bing.price, bing.sum)
+        console.log('('+bing.id+')'+'='+bing.money)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .big {
+            width: 250px;
+            height: 612px;
+            padding-left: 22px;
+            padding-right: 22px;
+            border: 1px solid skyblue;
+            /*使盒子不会应为padding和Margin、border而而变大或者缩小*/
+            box-sizing: border-box;
+            /*文字水平居中*/
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        .title {
+            height: 55px;
+            width: 212px;
+            color: #feffff;
+            /*通过行高让文字垂直居中*/
+            line-height: 55px;
+            font-size: 23px;
+            /* 浏览器显示倾斜的字体样式 */
+            /* font-style：oblique */
+            /* 浏览器显示斜体样式 */
+            /* font-style：italic */
+            font-style: italic;
+            background: #4889f3;
+            /*设置边框圆周角*/
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        li {
+            width: 212px;
+            height: 70px;
+            /* 去除li的默认小点点 */
+            list-style: none;
+            font-size: 20px;
+            line-height: 70px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        a {
+            /* a标签的默认样式清除 */
+            text-decoration: none;
+            color: #666666;
+        }
+
+        /* 鼠标悬停文字变色 */
+        a:hover {
+            color: #4889f3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <ul>
+            <li class="title">这些圈子都在看</li>
+            <li>
+                <a href="#">NBA速报</a>
+            </li>
+            <li>
+                <a href="#">5G网络</a>
+            </li>
+            <li>
+                <a href="#">游戏战队</a>
+            </li>
+            <li>
+                <a href="#">新款车型</a>
+            </li>
+            <li>
+                <a href="#">A股咨询</a>
+            </li>
+            <li>
+                <a href="#">爱豆动态</a>
+            </li>
+            <li>
+                <a href="#">搞笑萌宠</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

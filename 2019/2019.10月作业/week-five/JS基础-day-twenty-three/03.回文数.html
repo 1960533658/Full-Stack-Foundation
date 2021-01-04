@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 3、定义一个5位数,判断 该五位数是否为回文数。（判断第一位和第五位是否一
+        // 样，第二位和第四位是否一样）
+
+        //接收五位数
+        var num = prompt('请输入一个五位数')-0;
+        //将各个位上的数转成个位接收
+        var ge = num%10;
+        var shi = (num%100-ge)/10;
+        var bai = (num%1000-ge-shi*10)/100
+        var qian = (num%10000-ge-shi*10-bai*100)/1000
+        var wan = parseInt(num/10000)
+        //判断判断第一位和第五位是否一样，第二位和第四位是否一样
+        if (ge===wan&&shi===qian) {
+            alert('这是一个回文数')
+        }else{
+            alert('这不是一个回文数')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

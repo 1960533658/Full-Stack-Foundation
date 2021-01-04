@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 写一个函数，求出3在数组 var arr = {3,4,3,5,7,9};中出现的次数
+
+        //打印数组
+        var arr = [3,4,3,5,7,9];
+        // 创建函数
+        function count(arr) {
+            //定义变量累加次数
+            var cont = 0;
+            //遍历数组
+            for (var i = 0; i < arr.length; i++) {
+                //判断值是否与3相等
+                if (arr[i]==3) {
+                    // 有,就增加一次数量
+                    cont++;
+                }
+            }
+            //打印
+            alert('3出现了'+cont+'次');
+        }
+        //调用函数
+        count(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

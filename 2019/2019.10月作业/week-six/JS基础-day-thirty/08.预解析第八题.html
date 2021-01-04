@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 8.下列代码控制台打印出的值是多少？写出执行过程
+        //预解析提升函数和声明变量:
+        // function n() {
+        //     if (2 > 1) {
+        //         arr = 10;
+        //         brr = 10;
+        //         let arr;
+        //         var brr;
+        //         console.log(arr); // ？
+        //         console.log(brr); // ？
+        //     }
+        // }
+        //调用函数n
+        //进入判断式
+        //预解析提升函数和声明变量:
+        //而因为先隐式全局声明变量brr,之后又let声明arr导致报错
+        // Cannot access 'arr' before initialization
+        //后面的代码也无法执行-+
+
+        function n() {
+            if (2 > 1) {
+                arr = 10;
+                brr = 10;
+                let arr;
+                var brr;
+                console.log(arr); // ？
+                console.log(brr); // ？
+            }
+        }
+        n(); 
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

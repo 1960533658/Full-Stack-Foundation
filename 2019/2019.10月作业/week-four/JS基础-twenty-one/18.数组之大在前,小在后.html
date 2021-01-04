@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 请编程实现数组最大的与第一个元素交换，最小的与最后一个元素
+        // 交换，然后打印数组内容, var arr = [1,2,4,5,7,7,666,0,-1,-2,-3]
+        //分析:
+        //遍历数组找到最大值最小值,(记录他们的下标没有这样写 )
+        //再次循环判断最大值的下标截取替换
+
+        //定义数组,最大值最小值变量
+        var arr = [1, 2, 4, 5, 7, 7, 666, 0, -1, -2, -3], max = arr[0], min = arr[0]
+        // 遍历数组获取其中最大值最小值
+        for (var i = 0; i < arr.length; i++) {
+
+            //判断最大值
+            if (max < arr[i]) {
+                //不是最大值重新赋值更大的
+                max = arr[i];
+            }
+            // 判断最小值
+            if (min > arr[i]) {
+                // 不是最小值重新赋值更小的
+                min = arr[i];
+            }
+        }
+
+
+        //再次遍历获取大小值的下标
+        for (var i = 0; i < arr.length; i++) {
+            //最大值下标
+            if (max == arr[i]) {
+                //获取删除并修改
+                arr.splice(i, 1, arr[0])
+                // 添加到前面
+                arr.unshift(max)
+                //删除数组未添加前的第一个值
+                arr.splice(arr[1], 1)
+
+            }
+            // 最小值下标
+            if (max == arr[i]) {
+                // 获取删除，并把最后一个数添加到最大值的位置
+                arr.splice(i, 1, arr[arr.length - 1])
+                // 添加到后面
+                arr.push(min)
+                //删除最后一个数
+                arr.splice(arr.length - 1 - 1, 1)
+
+            }
+        }
+        //打印
+        console.log(arr)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

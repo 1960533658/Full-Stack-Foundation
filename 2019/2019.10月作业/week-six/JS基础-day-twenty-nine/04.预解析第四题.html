@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 4.下列代码控制台打印出的值分别是多少？并且把预解析的过程写出来
+        //提取代码函数和变量
+        // var a;
+        // var color;
+        // function outer() {
+        //     var anotherColor = "blue";
+        //     function inner() {
+        //         var tmpColor = color;
+        //         color = anotherColor;
+        //         anotherColor = tmpColor;
+        //         console.log(anotherColor);     // ?
+        //     }
+        //     inner();
+        // }
+
+        //给a,color赋值
+        //调用函数outer
+        //预解析函数
+        //提取 anothercolor;
+        //赋值bule
+        //执行函数inner
+        //提取变量tmpColor;
+        //交换值最终anotherColor为red,color是blue
+        //内部打印anothercolor  //red
+        //打印color//blue
+        var a = 25;
+        var color = "red";
+        function outer() {
+            var anotherColor = "blue";
+            function inner() {
+                var tmpColor = color;
+                color = anotherColor;
+                anotherColor = tmpColor;
+                console.log(anotherColor);     // red
+            }
+            inner();
+        }
+        outer();
+        console.log(color);  // blue
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

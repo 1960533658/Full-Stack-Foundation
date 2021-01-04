@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 将下面对象的属性取出来存储到一个数组中
+        //定义对象
+        var person = {
+            name: "one",
+            age: 12,
+            sex: "男"
+        };
+        //定义空数组
+        var personArr = []
+        //遍历对象
+        for (var key in person) {
+            //把每一项添加进新数组
+            personArr.push(person[key])
+        }
+        //打印数组内容
+        console.log(personArr)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

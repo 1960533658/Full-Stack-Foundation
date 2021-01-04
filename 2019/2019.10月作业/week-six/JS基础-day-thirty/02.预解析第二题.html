@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .下列代码控制台打印出的值是多少？写出执行过程
+        //预解析函数提升函数和变量:
+        // function fn() {
+        //     alert("我们是全局的fn");
+        // }
+        // function fn2() {
+        //     alert(fn);  // ？
+        //     fn = 3;
+        //     return;
+        //     function fn() {
+        //         alert("我是fn2里面的");
+        //     }
+        // }
+
+        //执行函数fn2
+        //预解析fn2局部作用域
+        //提升函数和声明变量:
+        // function fn() {
+        //     alert("我是fn2里面的");
+        // }
+        //执行函数内部代码
+        //alert(fn)打印函数代码本身
+
+        function fn() {
+            alert("我们是全局的fn");
+        }
+        function fn2() {
+            alert(fn);  // fn函数本身
+            fn = 3;
+            return;
+            function fn() {
+                alert("我是fn2里面的");
+            }
+        }
+        fn2();  
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

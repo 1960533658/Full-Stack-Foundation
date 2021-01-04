@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            top: 0;
+        }
+
+        ul {
+            float: left;
+            padding-left: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* 整块大盒子 */
+        .gogogo {
+            width: 1070px;
+            height: 329px;
+            box-sizing: border-box;
+            padding-top: 16px;
+            padding-left: 26px;
+            overflow: hidden;
+        }
+
+        /* 首部区域 */
+        .go {
+            width: 1070px;
+            height: 108px;
+
+        }
+
+        /* 首部文字 */
+        .depart {
+            float: left;
+            width: 147px;
+            height: 108px;
+            padding-top: 14px;
+            font-size: 20px;
+
+        }
+
+        /* 首部文字结束 */
+
+        /* 选择地区开始 */
+        .map {
+            float: left;
+            width: 920px;
+            height: 108px;
+        }
+
+        .map li {
+            text-align: center;
+            list-style: none;
+            float: left;
+            width: 71px;
+            height: 44px;
+            margin-right: 20px;
+            font-size: 20px;
+            line-height: 44px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        li:hover {
+            border: 1px solid #ff5b45;
+        }
+
+        /* 出发地大盒子  结束 */
+
+
+        /* 伪元素清除浮动开始 */
+        .clearfix::before,
+        .clearfix::after {
+            content: " ";
+            display: table;
+        }
+
+        .clearfix::after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        /* 伪元素清除浮动结束 */
+
+
+
+        /*  出行机票 开始*/
+        .go-plan {
+            width: 100%;
+            height: 100%;
+            margin-top: 25px;
+        }
+
+        /* 套餐类型文字开始 */
+        .type-write {
+            float: left;
+            width: 147px;
+            height: 100%;
+            padding-top: 14px;
+            font-size: 20px;
+        }
+
+        /* 套餐类型文字 结束*/
+        .plan {
+            float: left;
+            width: 897px;
+            height: 100%;
+        }
+
+        .plan li {
+            float: left;
+            text-align: center;
+            padding: 13px 20px;
+            font-size: 18px;
+            margin-right: 20px;
+            border: 1px solid #e0e0e0;
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .plan li:hover {
+            border: 1px solid #ff5b45;
+        }
+
+        .plan li:nth-child(4),
+        .plan li:nth-child(8),
+        .plan li:nth-child(12) {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gogogo">
+        <!-- 出发地大盒子  开始-->
+        <div class="go clearfix">
+            <div class="depart">
+                <!-- 出发地文字开始 -->
+                <span>出发地</span>
+                <!-- 出现文字完成 -->
+
+                <!-- 选择地址开始 -->
+            </div>
+            <div class="map">
+                <ul>
+                    <li><a href="#">西安</a></li>
+                    <li><a href="#">南京</a></li>
+                    <li><a href="#">武汉</a></li>
+                    <li><a href="#">上海</a></li>
+                    <li><a href="#">广州</a></li>
+                    <li><a href="#">北京</a></li>
+                    <li><a href="#">杭州</a></li>
+                    <li><a href="#">深圳</a></li>
+                    <li><a href="#">长沙</a></li>
+                    <li><a href="#">成都</a></li>
+                    <li><a href="#">重庆</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- 出发地大盒子  结束-->
+
+        <!-- 出行机票 开始-->
+        <div class="go-plan">
+            <!-- 套餐类型文字开始 -->
+            <div class="type-write">
+                <span>套餐类型</span>
+            </div>
+            <!-- 套餐类型文字 结束 -->
+
+            <!-- 航班起飞 开始-->
+            <div class="plan clearfix">
+                <ul>
+                    <li><a href="#">成都川航清迈临退特价</a></li>
+                    <li><a href="#">西安川航往返机票</a></li>
+                    <li><a href="#">南宁黄雀往返机票</a></li>
+                    <li><a href="#">武汉国航往返机票</a></li>
+                    <li><a href="#">上海9C白班6天机+首晚</a></li>
+                    <li><a href="#">广州9C往返机票</a></li>
+                    <li><a href="#">北京飞往返机票</a></li>
+                    <li><a href="#">杭州亚航含20KG行李</a></li>
+                    <li><a href="#">深圳海航往返机票</a></li>
+                    <li><a href="#">成都川航直飞往返机票</a></li>
+                    <li><a href="#">重庆山航往返机票</a></li>
+                </ul>
+            </div>
+            <!-- 航班起飞 结束-->
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 宠物编号 宠物名称    售价   产地
+        // p01      拉布拉多    2399   美国
+        // p02      京巴        1999   中国
+        // p03      金刚鹦鹉    6999   非洲 
+        // p04      蓝孔雀      1599   非洲
+        // p05      田园犬      109    中国
+        // p06      德牧        3000   德国
+
+        // 创建一个宠物对象，
+        // 包含四个属性，分别是 宠物编号pid 宠物名称pname  售价price  
+        // 产地addr，值为上面的数据。
+        // 创建一个数组中，将对象添加到数组中。
+        // 1.创建函数 获取价格最低的宠物对象   function getMinPricePet(arr) // arr是宠物数组
+        // 测试用例：
+        // function getMinPricePet(arr) 
+        // 结果:
+
+        // 2.创建函数 获取指定产地的宠物的平均价格 function getChinaAvgPrice(arr,addr) // arr是宠物数组 addr为产地名称
+        // 测试用例：
+        // function getChinaAvgPrice(arr,“中国”) 
+        // 结果：
+        let arr = [
+            { pid: 'p01', name: '拉布拉多', price: 2399, addr: '美国' },
+            { pid: 'p02', name: '京巴', price: 1999, addr: '中国' },
+            { pid: 'p03', name: '金钢鹦鹉', price: 6999, addr: '非洲' },
+            { pid: 'p04', name: '蓝孔雀', price: 1599, addr: '非洲' },
+            { pid: 'p05', name: '田园犬', price: 109, addr: '中国' },
+            { pid: 'p06', name: '德牧', price: 3000, addr: '德国' }
+        ]
+        //1.求最便宜的宠物
+        function getMinPricePet(min, minindex) {
+            min = arr[0].price
+            for (let i = 0; i < arr.length; i++) {
+                if (min > arr[i].price) {
+                    min = arr[i].price
+                    minindex = i
+                }
+            }
+            var minStr = `pid : ${arr[minindex].pid}, name : ${arr[minindex].name}, price : ${arr[minindex].price}, addr: ${arr[minindex].addr}` + ','
+            return minStr
+        }
+        var minPrice = getMinPricePet(arr);
+        console.log('最便宜的宠物价格' + minPrice)
+
+        //2.指定产地的宠物的平均价格
+        function getChinaAvgPrice(arr, addr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].addr == '中国') {
+                    sum += arr[i].price
+                }
+            }
+            return sum / 2
+        }
+        var sum = getChinaAvgPrice(arr, '中国');
+        console.log('指定产地的宠物的平均价格为:' + sum);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

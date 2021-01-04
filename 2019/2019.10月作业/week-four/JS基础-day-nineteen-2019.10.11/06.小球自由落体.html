@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 6. 一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下
+        // ，编程实现获取它在 第10次落地时，共经过多少米？第10次反弹多高？
+
+        //定义初始值100
+        var height = 100,length = 0;
+        length+=height;
+        for(var i = 1; i <= 10; i++) {
+            length+=height;
+            //每一次减一半
+            height/=2;
+        }
+        //打印最后结果
+        alert('最后一次反弹'+height+'米,共经过'+length+'米')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //  假设某人有100,000现金。每经过一次路口需要进行一次交费。交费规则为当他现
+        //  金大于50,000时每次需要交5%如果现金小于等于50,000时每次交5,000。请写一程
+        //  序计算此人可以经过多少次这个路口
+        //分析:
+            // dowhile循环判断,因为不知道要执行多好次,最起码也会执行一次,只有他组成
+            //两个判断,一个大于5万,一个小于等于五万
+            //每一次都减少不一样的值
+            //不够5000不用交
+        var money = 100000,cont=0;
+        do {
+            if (money>50000) {
+                money= money - money*0.05;
+                cont++;
+            } else if (money>5000&&money<50000){
+                money-=5000;
+                cont++
+            }else{
+                break;
+            }
+        } while (money>=5000);
+        alert(cont)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

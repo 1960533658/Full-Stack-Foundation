@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 5.输出下面的结果:
+        console.log ( NaN == NaN );
+        //false,NaN的比较结果就是false
+        console.log( NaN === NaN );
+        //false,NaN的比较结果就是false
+        console.log ( undefined == null );
+        // true,特殊规定
+        console.log ( undefined === null );
+        //false,他们的数据类型不能比较
+        console.log ( 1 + "true" ); 
+        //"1true",因为是字符串所以相拼接
+        console.log ( 1 + true );  
+        //2,true自动转化为数据1
+        console.log ( "abc" > "b" ); 
+        //false,ASC编码值从首字母开始,越往后越大
+        console.log ( "abc" > "aad" ); 
+        //true,ASC编码值从首字母开始,越往后越大
+        console.log ( [] == [] ); 
+        //false,复杂数据类型比较的是地址
+        console.log ( [] === [] ); 
+        //false,复杂数据类型比较的是地址
+        console.log ( [] == ! [] ); 
+        //false,[]转为true,![]false,真假为假
+        console.log ( [] == 0 );
+        //false,[]为真,0为假,真假为真
+        console.log ( ! [] == 0 );//
+        //true,取反[]为false,0为false,假假为真
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

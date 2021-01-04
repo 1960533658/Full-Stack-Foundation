@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //求两个数的最大公约数
+        var num1 = prompt('请输入数字')-0;
+        var num2 = prompt('其输入数字')-0;
+        var sum = 0;
+        if (num2>num1) {
+            sum = num1;
+            num1 = num2;
+            num2 = sum;
+        }
+
+        if (num1%num2==0) {
+            document.write('他们的最大公约数是'+sum)
+        }
+        for(var i = 1;i<=num1;i++) {
+            if(num1%i==0&&num2%i==0) {
+                sum = i;
+            }
+        }
+        document.write('他们的最大公约数为'+sum)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

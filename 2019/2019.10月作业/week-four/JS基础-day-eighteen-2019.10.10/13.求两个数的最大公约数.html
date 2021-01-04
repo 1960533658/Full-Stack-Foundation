@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 求任意2个正数的最大公约数和最小公倍数。
+        //分析:
+        //接收两个变量
+        //最小公倍数:最大不超过两个数的乘积
+        //最大公约数:最小不超过最小的数
+        var num1 = prompt('请输入数字') - 0;
+        var num2 = prompt('请输入数字') - 0;
+        var max = 0;
+        //最大公约数
+        if (num1 < num2) {
+            num1 = [num2, num2 = num1][0]
+        }
+        for (var i = 1; i <= num2; i++) {
+            if (num1 % i == 0 && num2 % i == 0) {
+                max = i;
+            }
+        }
+
+        //最小公倍数
+        var min;
+        for (var i = 1; i <= num1 * num2; i++) {
+            if (i%num1==0&&i%num2==0) {
+                min = i; 
+            }
+        }
+        alert('他们的最小公倍数是:'+min+',他们的最大公约数是:' + max)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

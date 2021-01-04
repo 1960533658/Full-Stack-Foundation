@@ -1,0 +1,207 @@
+@mixin usuallyLeft ($position,$left,$top) {
+    position: $position;
+    left: $left;
+    top: $top;
+}
+img {
+    vertical-align: middle;
+}
+@mixin usuallyRoght ($position,$right,$bottom) {
+    position: $position;
+    right: $right;
+    bottom: $bottom;
+}
+@mixin wh ($width,$height) {
+    width: $width;
+    height: $height;
+}
+// header 样式
+$headerHeight: 40px;
+$headerBackgroundColor: #c91523;
+$headerCursor: pointer;
+
+// header-logo 样式
+$logoTop:10px;
+$logoLeft:10px;
+$logoWidth: 58px;
+$logoHeight: 20px;
+$logoBackgroundPosition: 0px -109px;
+
+// header-search 样式
+$headerSearchHeight:40px;
+$headerPadding: 0 55px 0 78px;
+
+// i小放大镜
+$headerIBackgroundPosition: -59px -109px;
+$headerITop: 10px;
+$headerILeft: 84px;
+$headerIWidth: 20px;
+$headerIHeight: 20px;
+
+// input搜索框元素
+$headerInputHeight: 30px;
+$headerinputMarginTop: 5px;
+$headerInputBorderRadius: 15px;
+$headerInputPaddingLeft: 30px;
+$headerIWidth: 20px;
+$headerIHeight: 20px;
+
+// login登录 选项
+$loginWidth: 54px;
+$loginHeight: 40px;
+$loginLineheight: 40px;
+$loginFontsize: 14px;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $headerHeight;
+    background-color: $headerBackgroundColor;
+    cursor: $headerCursor;
+
+    .header-logo {
+        position: absolute;
+        top: $logoTop;
+        left: $logoLeft;
+        width: $logoWidth;
+        height: $logoHeight;
+        background-position: $logoBackgroundPosition;
+    }
+
+    .header-search {
+        position: relative;
+        width: 100%;
+        height: $headerSearchHeight;
+        padding: $headerPadding;
+
+        i {
+            position: absolute;
+            top: $headerITop;
+            left: $headerILeft;
+            width: $headerIWidth;
+            height: $headerIHeight;
+            background-position: $headerIBackgroundPosition;
+        }
+
+        input {
+            width: 100%;
+            height: $headerInputHeight;
+            margin-top: $headerinputMarginTop;
+            border-radius: $headerInputBorderRadius;
+            padding-left: $headerInputPaddingLeft;
+            border: none;
+        }
+    }
+
+    .login {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $loginWidth;
+        height: $loginHeight;
+        text-align: center;
+        line-height: $loginLineheight;
+        color: #ffffff;
+        font-size: $loginFontsize;
+    }
+}
+main {
+    width: 100%;
+    background-color: gold;
+    font-size: 50px;
+    padding-top: 40px;
+
+    // 主题轮播图
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+
+        ul {
+            width: 1000%;
+    
+            li {
+                width: 10%;
+    
+                a {
+                    display: block;
+    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // 主体-导航
+    .daohang {
+        width: 100%;
+        background-color: #fff;
+
+        ul {
+            width: 100%;
+            overflow: hidden;
+
+            li {
+                float: left;
+                width: 25%;
+
+                a {
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    span {
+                        display: block;
+                        margin-top: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    //广告1  adversement
+    .adversement {
+        width: 100%;
+        padding: 10px;
+
+        a {
+            display: block;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// 底部导航
+
+nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    @include wh(100%,44px);
+    background-color: #fff;
+}
+
+nav a {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+}
+
+nav img {
+    width: auto;
+    height: 100%;
+}

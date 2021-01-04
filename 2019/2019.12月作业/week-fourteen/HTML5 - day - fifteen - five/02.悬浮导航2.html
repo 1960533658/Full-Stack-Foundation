@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 34px;
+            height: 171px;
+            background-color: #474747;
+            float: right;
+        }
+
+        .box a {
+            display: block;
+            width: 34px;
+            height: 34px;
+            background-image: url(./images/1.png);
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            position: relative;
+        }
+
+        .box span {
+            display: block;
+            width: 0px;
+            height: 35px;
+            background-color: #474747;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 34px;
+            text-decoration: none;
+            font-style: normal;
+            position: absolute;
+            top: 0px;
+            right: 0%;
+            transition: all 0.5s;
+        }
+
+        .box a:hover span {
+            width: 79px;
+            right: 34px;
+        }
+
+        .box a:before {
+            content: "";
+            width: 0px;
+            height: 34px;
+            background-image: url(./images/1.png);
+            background-repeat: no-repeat;
+            background-position: -40px 0px;
+            position: absolute;
+            z-index: 10;
+            right: 0%;
+        }
+
+        .box a:hover:before {
+            width: 100%;
+            display: block;
+            transition: all 0.5s;
+            right: 0px;
+        }
+
+        .box a:nth-child(2) {
+            background-position: 0px -35px;
+        }
+
+        .box a:nth-child(2):before {
+            background-position: -40px -35px;
+        }
+
+        .box a:nth-child(3) {
+            background-position: 0px -70px;
+        }
+
+        .box a:nth-child(3):before {
+            background-position: -40px -70px;
+        }
+
+        .box a:nth-child(4) {
+            background-position: 0px -105px;
+        }
+
+        .box a:nth-child(4):before {
+            background-position: -40px -105px;
+        }
+
+        .box a:nth-child(5) {
+            background-position: 0px -210px;
+        }
+
+        .box a:nth-child(5):before {
+            background-position: -40px -210px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#"><i></i><span>购物车</span></a>
+        <a href="#"><i></i><span>我的收藏</span></a>
+        <a href="#"><i></i><span>我的浏览</span></a>
+        <a href="#"><i></i><span>我的银铃铛</span></a>
+        <a href="#"><i></i><span>咨询小当家</span></a>
+    </div>
+
+</body>
+
+</html>

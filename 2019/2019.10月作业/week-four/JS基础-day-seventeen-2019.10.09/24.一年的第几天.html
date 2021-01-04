@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 9.	输入某年，某月，某日，判断这一天是一年中的第几天？
+        //分析:输入年月日
+        //判断是否是闰年
+        //这是一年的那一个月
+        //几号
+        var year = prompt('请输入年') - 0;
+        var mou = prompt('请输入月') - 0;
+        var day = prompt('请输入日') - 0;
+        var num = 0;
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            if (mou == 1) {
+                num += day;
+                alert('这是' + year + '年的第' + day + '天')
+            } else if (mou == 2) {
+                num += 31 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 3) {
+                num += 31 + 29 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 4) {
+                num = num + 2 * 31 + 29 + 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 5) {
+                num = num + 3 * 31 + 29 + 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 6) {
+                num = num + 3 * 31 + 29 + 2 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 7) {
+                num = num + 4 * 31 + 29 + 2 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 8) {
+                num = num + 5 * 31 + 29 + 2 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 9) {
+                num = num + 5 * 31 + 29 + 3 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 10) {
+                num = num + 6 * 31 + 29 + 3 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 11) {
+                num = num + 6 * 31 + 29 + 4 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 12) {
+                num = num + 7 * 31 + 29 + 4 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            }
+        } else {
+            if (mou == 1) {
+                num += day;
+                alert('这是' + year + '年的第' + day + '天')
+            } else if (mou == 2) {
+                num += 31 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 3) {
+                num += 31 + 28 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 4) {
+                num = num + 2 * 31 + 28 + 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 5) {
+                num = num + 3 * 31 + 28 + 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 6) {
+                num = num + 3 * 31 + 28 + 2 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 7) {
+                num = num + 4 * 31 + 28 + 2 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 8) {
+                num = num + 5 * 31 + 28 + 2 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 9) {
+                num = num + 5 * 31 + 28 + 3 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 10) {
+                num = num + 6 * 31 + 28 + 3 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 11) {
+                num = num + 6 * 31 + 28 + 4 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            } else if (mou == 12) {
+                num = num + 7 * 31 + 28 + 4 * 30 + day;
+                alert('这是' + year + '年的第' + num + '天')
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

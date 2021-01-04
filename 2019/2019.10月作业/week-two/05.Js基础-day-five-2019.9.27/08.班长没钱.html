@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 接收班长口袋里的钱数？若大于等于2000，请大家吃西餐。若小于2000，大于等于1500，请大家吃快餐。
+        // 若小于1500，大于等于1000，请大家喝饮料。若小于1000，大于等于500，请大家吃棒棒糖。否则提醒班长下次把钱带够
+        //分析:
+        //      类似于第六题,只是改了下参数不再添加注释
+        var king= prompt('请输入钱数');
+        if(king>=2000) {
+            alert('吃熊猫');
+        }else if(king<2000&&king>=1500) {
+            alert('吃快餐');
+        }else if(king>=1000&&king<1500) {
+            alert('喝饮料');
+        }else if(king>=500&&king<1000) {
+            alert('吃棒棒糖');
+        }else if(king<500) {
+            alert('没钱回家玩蛋去');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

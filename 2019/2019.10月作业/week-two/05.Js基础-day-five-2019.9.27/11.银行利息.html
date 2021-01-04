@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 本金10000元存入银行，年利率是千分之三，每过1年，将本金
+        // 和利息相加作为新的本金。计算5年后，获得的本金是多少？
+        //分析:
+        //      1.五年以后需要很多运算且运算根据固定的本金递增,
+        //      2.使用for循环执行五次计算后弹出钱
+
+        //定义10000定金
+        var money = 10000;
+        //for循环执行五次,每一次以当前卡内余额+利息
+        for(var i = 1;i<=5;i++) {
+            // 每运行一次就相加一会
+            money+=money*0.003;
+        }
+        //取小数点后几位
+        alert(money.toFixed(3))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 5. 下列代码控制台打印出的值分别是多少？并且把预解析的过程写出来
+        //预解析:
+        // 全局声明var a;
+        //调用函数f1;
+        //函数调用
+        // 局部变量var a,全局变量b,c
+        //赋值打印依次9,9,9
+        //外部打印a全局为25,b,c是9,9
+        var a = 25;
+        function f1() {
+            var a = b = c = 9;
+            console.log(a);    //9
+            console.log(b);    // 9
+            console.log(c);    // 9
+        }
+        f1();
+        console.log(a);    //25
+        console.log(b);     // 9
+        console.log(c);     // 9
+    </script>
+</body>
+
+</html>

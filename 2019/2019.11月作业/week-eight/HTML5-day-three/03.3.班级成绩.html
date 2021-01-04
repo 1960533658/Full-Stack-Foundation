@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        th {
+            width: 203px;
+            height: 23px;
+            border-top: 2px solid #303031;
+            border-right: 2px solid #303031;
+        }
+
+        th:first-child {
+            border-left: 2px solid #303031;
+        }
+
+        th:last-child {
+            width: 413px;
+            height: 23px;
+        }
+
+        td {
+            text-align: center;
+            border-top: 2px solid #303031;
+            border-right: 2px solid #303031;
+        }
+
+        tr td:first-child {
+            border-left: 2px solid #303031;
+        }
+
+        tr:last-child td {
+            border-bottom: 2px solid #303031;
+        }
+
+        tr:nth-child(3) td:first-child {
+            border-bottom: 2px solid #303031;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>班级</th>
+                <th colspan="2">姓名和年龄</th>
+                <!-- <th>年龄</th> -->
+                <th>电话</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">601班</td>
+                <td>Jack</td>
+                <td>24</td>
+                <td>1311234567</td>
+            </tr>
+            <tr>
+                <!-- <td>601班</td> -->
+                <td>Tom</td>
+                <td>22</td>
+                <td>1311234567</td>
+            </tr>
+            <tr>
+                <td rowspan="3">602班</td>
+                <td>Rose</td>
+                <td>22</td>
+                <td>1311234567</td>
+            </tr>
+            <tr>
+                <!-- <td>602班</td> -->
+                <td>张三</td>
+                <td>25</td>
+                <td>1311234567</td>
+            </tr>
+            <tr>
+                <!-- <td>602班</td> -->
+                <td>李四</td>
+                <td>25</td>
+                <td>1311234567</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // 提示用户输入年龄，若用户的年龄大于等于18岁，则给用户在网页中显示一张图片，否则以弹出框的方式提示用户年龄太小。
+        let age = prompt('请输入年龄') - 0;
+        if (age >= 18) {
+            document.write('<img src="./img/BecameAWaste.jpeg" alt="">')
+        } else {
+            alert('你真的是一个废物')
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

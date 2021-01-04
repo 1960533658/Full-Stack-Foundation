@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 获取url中的用户名和密码 https://www.test.com/login?name=zs&pwd=123,并且控制台输出对象的格式{name:'zs',pwd:123}
+        var str = 'https://www.test.com/login?name=zs&pwd=123';
+        //以问号拆分网址字符串,并找到后半段字符串,以为拆分成功就是数组形式
+        var str2 = str.split('?')[1]
+        //以&拆分后半段字符串
+        str2 = str2.split('&')
+        //获取两部分以+拼接
+        str2 = str2[0] + ',' + str2[1]
+        //替换=为:,但是一次只能替换一个
+        str2 = str2.replace('=', ':')
+        //将zs改成带引号的zs
+        str2 = str2.replace('zs', '\'zs\'')
+        //拼接{},并且替换最后一个=为:
+        str2 = '{' + str2.replace('=', ':') + '}'
+        console.log(str2);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

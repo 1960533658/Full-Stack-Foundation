@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 声明两个变量,第一个变量为num1,值为123,第二个变量为num2,值为456,实现两个变量值的交换,即让num1为456,让num2为123;
+        
+        
+//要求，用2种方式实现
+
+        //方法1
+        var num1 = 123;
+        var num2 = 456;
+        var num3;
+        num3 = num1;
+        num1 = num2;
+        num2 = num3;
+        console.log(num1, num2,)
+
+        //方法2
+        var num_one = 123;
+        var num_two = 456;
+        num_one = [num_two,num_two = num_one][0];
+        console.log(num_one, num_two);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 将字符串变成驼峰法var str = "get-element-by-id"， 结果是 "getElementById"
+        var str = "get-element-by-id"
+        //拆分字符串
+        str = str.split('-')
+        // 取出第一个不需要改变大小的get为初始值
+        let str2 = str[0]
+        console.log(str)
+        //遍历获取每一个改变大小写的第一个字母
+        for (let i = 1; i < str.length; i++) {
+            //获取第一个值
+            let upper = str[i][0]
+            //第一个字母转大写
+            upper = upper.toUpperCase(upper)
+            //str是数组,使用了独属于String对象的方法,所以报错
+            // str = str.replace(str[i][0] + '', upper + '')
+            //替换转化后的大写首字母,并拼接字符串
+            str2 += str[i].replace(str[i][0], upper)
+
+        }
+        console.log(str2)
+
+        // var str = "get-element-by-id"
+
+        // str = str.split('-')
+        // for (let i = 1; i < str.length; i++) {
+        //     let upper = str[i][0]
+        //     upper = upper.toUpperCase(upper)
+        //     //str是数组,使用了独属于String对象的方法,!!!!!!!!!!!!!!!!!!!所以报错
+        //     // str = str.replace(str[i][0] + '', upper + '')
+
+        //     str[i] += str[i].replace(str[i][0], upper)
+
+        // }
+        // console.log(str)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

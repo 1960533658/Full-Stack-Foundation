@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 需求: 利用JavaScript完成输出如下图形（由“空格”和“*”这两种符号组成）
+        //首先打印出来直角三角形,
+        //其次根据i的取值在写一个内部循环打印空格
+        for(var i = 1;i<=4;i++) {
+            //打印_
+            for(var m = 3;m>=i;m--) {
+                document.write('&nbsp')
+            }
+            for(var j = 1;j<=i*2-1;j++) {
+                document.write('*')
+            }
+            document.write('<br />')
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

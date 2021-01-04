@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // :把1 - 100之间的数字，10个数字为一组，在控制台打印出每组的和，
+        // 分析:
+            //定义循环执行十次
+            //内部循环初始值为(j-1)*19,区间范围<=j*10
+        for(var j = 1; j <= 10; j++) {
+            //定义一个值每执行完一次内部循环就重置0,计算每十个数的和
+            var sum = 0;
+            for (var i = (j - 1) * 10 + 1; i <= 10 * j; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

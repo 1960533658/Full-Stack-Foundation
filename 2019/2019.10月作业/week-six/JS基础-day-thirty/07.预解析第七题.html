@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 下列代码控制台打印出的值是多少？写出执行过程
+        //预解析提升函数和声明变量:
+        // function test() {
+        //     var x = 31;
+        //     if (true) {
+        //         var x = 71;
+        //         console.log(x) // ?
+        //     }
+        //     console.log(x) // ?
+        // }
+        //继续执行调用test函数
+        //预解析提升函数和声明变量:
+        // var x 
+        // 赋值31
+        //进入判断式
+        // var x
+        //覆盖外部的x的值为71
+        //打印x             71
+        //结束判断式
+        //打印x，因为x的值被覆盖修改所以是    71
+        function test() {
+            var x = 31;
+            if (true) {
+                var x = 71;
+                console.log(x) // 71
+            }
+            console.log(x) // 71
+        }
+        test()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

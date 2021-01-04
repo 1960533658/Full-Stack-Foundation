@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 7. 根据输入的数字，判断如果是1-5打印工作日，如果是6，7打印休息日。
+
+        //接收数字
+        var num = prompt('请输入1-7之间的数字') - 0;
+        //判断是不是工作日
+        if (num > 1 && num <= 5) {
+            alert(num + '是工作日')
+            //判断是不是休息日
+        } else if (num > 5 && num <= 7) {
+            alert(num + '是休息日')
+            //如果都不是...
+        } else {
+            alert('请输入1-7之间的自然数')
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

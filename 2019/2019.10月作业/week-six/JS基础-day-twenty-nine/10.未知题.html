@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //首先解读所有的function
+        //调用a函数,传入函数b但是b作为的是一个值
+        //遇到了三级作用域链fun函数(只读)
+        //继续向下执行打印  'a'
+        //调用三级作用域链的fun函数,且书写了一个匿名函数作为参数
+        //在四级作用域链的fun函数中只读四级作用域链fun打印   'b'
+        //后面调用了五级作用域链fun,五级作用域链fun函数内执行了函数c-
+        //-一级一级地往上找在一级作用域链找到了函数c,执行c,打印出  'c'
+        //执行完a函数调用函数c,又打印了一个'c'
+        //即最后打印结果  'a' 'b' 'c' 'c' 
+        function a(fun) {
+            var fun = function b(fun) {
+                var fun = function () {
+                    c();
+                };
+                console.log('b');
+                fun();
+            };
+            console.log('a');
+            fun(function () {
+                c();
+            })
+        }
+        function b(fun) {
+            console.log('b');
+            fun();
+        }
+        function c() {
+            console.log('c');
+        }
+        a(b);//abc
+        c();//c
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

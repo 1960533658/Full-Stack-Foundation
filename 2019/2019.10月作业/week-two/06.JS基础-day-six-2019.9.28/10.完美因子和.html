@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 一个数如果恰好等于它的因子之和，这个数就称为 "完数 "。 例如6=1＋2＋3.编程 找出1000以内的所有完数。
+
+        for (var i = 1; i <= 1000; i++) {
+            var sum = 0;
+            for (var j = 1; j < i; j++) {
+                if (i % j == 0) {
+                    sum += j
+                }
+            }
+            if (sum == i) {
+                document.write(i + '<br />')
+            }
+        }
+        // var n = '12';
+        // var result = isNaN(n)
+        // alert(result)
+        // if (result==true) {
+        //     alert('不是一个数字')
+        // } else {
+        //     alert('是一个数字')
+        // }
+        // var num = '52';
+        // if (typeof num == NaN) {
+
+        //     console.log('不是一个数字')
+        // }else {
+        //     console.log("是一个数字")
+        // }
+        // 2+22+222+2222+22222
+        // var n = 0;
+        // var sum = 0;    
+        // for (var i = 0; i < 5; i++) {//表示从零开始到输入的个数  
+        //     n = n * 10 + 2; //2+22+222+222
+        //     sum = sum + n; 
+        // }                          //22222
+        // console.log(sum)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

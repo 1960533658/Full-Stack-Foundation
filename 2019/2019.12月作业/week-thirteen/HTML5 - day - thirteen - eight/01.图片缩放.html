@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 1200px;
+            height: 500px;
+            margin: 100px auto;
+        }
+
+        img {
+            margin-right: 50px;
+            transition: all 2s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        /* 
+			transition: all 2s linear;
+			transform: scale(0.5); 
+        }
+
+        div:hover {
+            transform: scale(0.5);
+        }
+        */
+
+        div img:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./images/1.jpeg" alt="">
+        <img src="./images/2.jpeg" alt="">
+    </div>
+</body>
+
+</html>

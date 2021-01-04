@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 某班考试成绩如下，利用二维数组存储这些数据，统计出全班的平均成绩
+        // 第一组： 89，66，54
+        // 第二组： 77，93，68
+        // 第三组： 55,   45,  88
+        // 第四组： 71,   76,  75
+
+        //定义二维数组,保存总分和个数
+        var arr = [
+            [89, 66, 54],
+            [77, 93, 68],
+            [55, 45, 88],
+            [71, 76, 75]
+        ],count = 0,sum = 0;
+        // 外部遍历arr用以于每个值作比较
+        for (var i = 0; i < arr.length; i++) {
+            //  内部遍历arr用于与让arr[i]和数组中的每个值作比较
+            for (var j = 0; j < arr[i].length; j++) {
+                //个数自增
+                count++;
+                // 添加每一个数字
+                sum+=arr[i][j]
+            }
+        }
+        //打印
+        alert('总分是:'+sum/count)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 输入三角形的三边，根据输入的三角形的三边判断是否能组成三角形，如果可以进一步 判断三角形的类型
+        //分析:    注意！！！先判断等边三角形在判断等腰，不让不会打印等边三角形
+        //      1.获取三条边
+        //      2.首先判断是否 任意两边和大于第三遍    
+        //      3.如果是,那么考虑到很多类型的三角形:等边、等腰、直角、普通。由于等腰直角三角形判断式太长，所以没写
+        //        如果有兴趣可以尝试把等腰三角形和直角三角形结合起来
+
+        //获取三条边
+        var one = parseInt(prompt('请输入第一条边'))
+        var two = parseInt(prompt('请输入第二条边'))
+        var three = parseInt(prompt('请输入第三条边'))
+
+        //①判断是不是三角形
+        if (one + two > three && one + three > two && two + three > one) {
+            alert('可以组成三角形')
+            //判断等边三角形三遍相等
+            if (one === two && two === three) {
+                alert('这是等边三角形')
+                //判断其中两边相等
+            } else if (one === two || two === three || three === one) {
+                alert('这是等腰三角形')
+                //判断勾股定理
+            } else if (Math.pow(one, 2) + Math.pow(two, 2) == Math.pow(three, 2) || Math.pow(one, 2) + Math.pow(three, w) === Math.pow(two, 2) || Math.pow(two, 2) + Math.pow(three, 2) === Math.pow(one, 2)) {
+                alert('这是直角三角形')
+                //都不符合就是普通三角形
+            } else {
+                alert('这是普通三角形')
+            }
+            //② 不是三角形，任意两边和不大于第三边
+        } else {
+            alert('任意两边和要大于第三遍')
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

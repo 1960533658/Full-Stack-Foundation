@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1.下列代码控制台打印出的值分别是多少？
+        function f1() {
+            var user = '二狗子';
+            //因为user是在函数内部声明的,而函数中的this指向window,而user在全局并未声明
+            //不是window对象,对象没有某个属性时值为undefined
+            console.log(this.user);  // undefined
+            //普通函数中this指向window
+            console.log(this);   // window
+        }
+
+        f1();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

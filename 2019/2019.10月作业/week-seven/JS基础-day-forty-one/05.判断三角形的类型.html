@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 输入三角形的三边，根据输入的三角形的三边判断是否能组成三角形，如果可以进一步 判断三角形的类型
+        // 等边三角形(三边相等) 等腰三角形(两边相等)  直角三角形(a平方+b平方=c平方)  其他三角形（不满足上面的）
+        //接收三角形的三条边
+        let a = prompt('请输入三角形的三遍之一') - 0;
+        let b = prompt('请输入三角形的三遍之一') - 0;
+        let c = prompt('请输入三角形的三遍之一') - 0;
+
+
+
+
+
+
+        //!!!!!找到最大值和最小值在判断等腰三角形和等边三角形时会出现找不到不大不小的值,所以还不如用数组排序的方法获取,这种方法只适合直角三角形的判断
+        //数组排序得到的各个值才能判断等腰和等边等等的各种类型的值,要不然if判断式要写很多的判断
+
+        //使用math对象获取其中的最大值和最小值
+        var max = Math.max(a, b, c)
+        var min = Math.min(a, b, c)
+        //将a,b,c装入数组
+        var arr = [a, b, c];
+        //遍历数组获取第三个不大不小的值
+        for (let key of arr) {
+            //判断是不是不等于最大值和最小值
+            if (key != max && key != min) {
+                //使用var声明变量接收不大不小的值,不要使用let,因为作用域的原因
+                var three = key
+            }
+        }
+
+
+
+
+
+        //判断是不是三角形
+        //必须先判断是不是等边再判断是不是等腰
+        if (min + three > max) {
+            if (a == b && b == c && c == a) {
+                alert('这是等边三角形')
+            } else if (a == b || b == c || c == a) {
+                alert('这是等腰三角形')
+            } else if (Math.pow(min, 2) + Math.pow(three, 2) == Math.pow(max, 2)) {
+                alert('这是直角三角形')
+            }
+        } else {
+            alert('这不是一个三角形')
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

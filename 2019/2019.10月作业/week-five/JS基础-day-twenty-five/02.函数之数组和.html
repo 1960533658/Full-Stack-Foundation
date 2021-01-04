@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 2. 写一个函数，求数组的所有元素的和，var arr = [18, 45, 333，5，6，1，5]
+        
+        //定义数组
+        var arr = [18, 45, 333, 5, 6, 1, 5];
+        //自调用函数只能执行一次
+        (function (arr) {
+            // 声明变量计算和
+            var sum = 0;
+            //遍历数组
+            for (var i =0;i < arr.length;i++) {
+                //累加每一个值
+                sum+=arr[i];
+            }
+            //打印数组
+            console.log('所有的元素和为:'+sum)
+        //传参
+        })(arr)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

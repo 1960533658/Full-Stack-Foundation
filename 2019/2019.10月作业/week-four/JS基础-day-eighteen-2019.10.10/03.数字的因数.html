@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //  用户输入一个数字，列出所有它能够整除的数字（while实现）
+        //分析:
+            //while循环遍历这个数之前的大于一的所有数
+            //判断能否整除打印每一个结果
+
+            //用户输入
+        var num = prompt('请输入数字')-0;
+        //while初始值
+        var i = 1;
+        while (i<=num) {
+            //判断是否符合结果
+            if (num%i==0) {
+                console.log(i)
+            }
+            i++;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

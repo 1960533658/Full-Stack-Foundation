@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 需求: 用for循环求2+22+222+2222+22222的和
+        // 分析:上一项*10+2=下一项
+        var n = 2;
+        // 2.定义一个累加变量 sum
+        var sum = 0;
+        // 3.循环 累加4次
+        for (var i = 0; i < 5; i++) {
+            n = n * 10 + 2;
+            // 4.让n进行变化     // 5.累加
+            sum += n
+        }
+        console.log(sum);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

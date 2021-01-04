@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 编写一个add函数，实现如下效果:
+        // console.log(add(1, 2)); // 3
+        // console.log(add(1)(2)); // 3 
+        //第一个直接传参创建函数
+        // function add(num1, num2) {
+        //     //相加
+        //     num1 += num2;
+        //     //打印
+        //     alert(num1)
+        // }
+        // add(1, 2)
+        //第二个需要嵌套函数
+        function add(num1,num2) {
+
+            //判断长度
+            if (arguments==2) {
+                直接返回
+                return num1
+            //返回第二个函数
+            }else return function (num2) {
+                return arguments[0]+arguments[1];
+            }
+            
+        }
+        console.log(add(1, 2))
+        console.log(add(1)(2))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

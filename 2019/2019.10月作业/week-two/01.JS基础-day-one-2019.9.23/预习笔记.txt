@@ -1,0 +1,315 @@
+在控制台打印hello world
+    创建html文档
+    在body或者title标签下面，内部编写script标签.写入'console.log('helloworld')',打开网页,右单击检查,打开控制台,即可
+    看见"helloworld".
+
+JS的用途
+    1.给网页添加动态效果
+    2.对浏览器事件作出响应
+    3.读写HTML元素
+    4.在数据被提交到服务器之前验证数据
+    5.基于node.js技术进行服务器端编程(服务器开发node.js可以做服务器开发)
+
+JS 的组成
+    ECMAScript、 DOM 、 BOM
+
+    ECMAScript:就是由ECMAScript规范规定的语法、类型、语句、关键字、运算符等基本知识
+
+    DOM: 文档对象模型(Document Object Model),使用JavaScript访问和修改HTML文档的内容和结构。例如: 获得input value属性的值(操作html网页元素就是DOM)
+
+    BOM：浏览器对象模型(Browser Object Model),使用JavaScript对浏览器窗口进行操作。例如：获得或修改浏览器地址栏的路径。(操作浏览器就是Bom)
+
+    
+Js的特点:
+    1. JavaScript是一种轻量级的编程语言，可以嵌入到html页面中，     由来浏览器来解释执行，用来实现浏览器和用户交互。
+
+    2. JavaScript是一种基于对象和事件驱动的客户端脚本语言，他可以在用户浏览器为网页添加一些动态效果，和用户交互，响应用户操作。
+
+    3. JavaScript可以用来帮助减轻服务器的压力，例如在客户端完成数据校验。
+
+    4. JavaScript具有跨平台性，JavaScript依赖于浏览器本身，与操作系统无关，只要设备有浏览器，就可以运行js语言
+
+变量的声明和使用:
+    变量就是装载数据的盒子.
+    声明 :
+        var 变量名 = 'value'
+    命名规则:
+    1.不能以数字开头
+
+    2.只可以使用'_'一个特殊符号
+
+    3.不可以使用关键字和保留字
+
+变量和常量的命名推荐:
+
+    1.尽量不要使用无意义的命名。
+    2.多单词连接使用'_'连接命名或驼峰命名法即单词首字母大写。
+
+
+
+变量的三种声明方式:
+    1.var
+
+    2.let
+
+    3.conset
+它们之间有什么区别呢？
+    1.var声明的变量会挂载在window上，而let和const声明的变量不会
+
+    2.let和const声明形成块作用域
+
+    3.var声明变量存在变量提升，let和const不存在变量提升
+
+    4.同一作用域下let和const不能声明同名变量，而var可以
+
+    5.const声明一只读的常量，声明后值不能进行改变，但如果声明的是一个对象，对象的属性是可以改变的
+
+数据类型:
+
+    五种基本数据类型(Number,String,Boolean,Undefined,Null)
+    一种复杂数据类型(Object)
+    Es6新引入原始数据类型(Symbol)
+
+    Number:
+    整数,数字
+
+
+    整数也可以被表示为二进制（以2为底）或八进制（以8为底）或十六进制（以16为底）的字面量。
+
+    二进制字面量的首数字必须是0，后接字母b，其后的数字可以是任何二进制数字（0-1）。
+    var num=0b100; 
+
+    八进制字面量的首数字必须是0，其后的数字可以是任何八进制数字（0-7）。
+    var num=050; 
+
+    十六进制的字面量首位数字必须为0，后接字母x，然后是任意的十六进制数字（0-9 和 A-F）。这些字母可以是大写也可以是小写。
+    var num=0xab; 
+
+    尽管所有整数都可以表示为八进制或者十六进制的字面量，但所有数学运算返回的都是十进制结果。
+
+    小数(浮点型)
+        var num = 1.2;
+
+    NaN:
+        var num = '12'
+        console.log(typeof num)
+        不是一个数字
+
+    isNaN: 
+        是不是一个非数字
+        
+    String类型
+        var letter = '字符串'
+        字符串有length属性
+        只要是英号包裹起来的都是String类型
+        console.log(typeof letter) // String
+
+    Boolean类型:
+        只有两个值，true(是)和false(否)，通常用于条件判断
+        var win = true;
+        console.log(win) //true
+        console.log(typeof win) //boolean
+
+    Undefined类型:
+        声明了变了变量但是未赋值,Undefined代表的是一种意外情况
+        var undef;
+        console.log(undef);  // undefined
+        console.log(typeof undef);  // undefined
+
+    Null类型:
+        声明了变量但是不知道赋什么值就给null,意思就是空,Null代表的是意料之中的
+        var no = null;
+        consloe.log(no) //null
+        consloe.log(typeof no) //Object
+        Null类型进行typeof操作符后，结果是object，原因在于，null类型被当作一个空对象引用
+
+    Object类型:
+    JS中对象是一组属性与方法的集合,它们描述的是一类对象所具有的属性和方法。
+        var obj={
+        name:"alice",
+        sex:"女",
+        age:18
+    };
+    console.log(obj);   // {name: "alice", sex: "女", age: 18}
+    console.log(typeof obj);  // object
+
+    对象类型包括:数组(Array),函数(Function).
+        数组:var arr[1,2,3];
+        consloe.log(arr); //[1,2,3]
+        consloe.log(typeof arr); //object  
+
+    函数: 
+    var fun = function () {
+        console.log(typeof fun);
+    };
+    fun() //function
+
+    Symbol类型:
+    Symbol是ES6引入的一种新的原始数据类型，它表示独一无二的值。
+    var val = Symbol();
+    console.log(val); //Symbol 
+    console.log(typeof val); //Symbol
+
+    Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了在控制台显示，或者转为字符串时，比较容易区分
+    var s1 = Symbol();
+    var s2 = Symbol();
+    console.log(s1);   // Symbol()
+    console.log(s2);   // Symbol()
+
+    s1、s2的结果都是Symbol()，为了区分它们是两个Symbol 值，我们需要给它们添加参数，这样输出的时候，我们就可以分清哪个是哪个的值了
+    var s3 = Symbol("我是s3");
+    var s4 = Symbol("我是s4");
+    console.log(s3);   // Symbol(我是s3)
+    console.log(s4);   // Symbol(我是s4)
+
+    当Symbol的参数是一个对象时，就会调用该对象的toString方法，将其转换为字符串，然后再生成一个Symbol值
+        const obj = {
+        toString() {
+            return "哈哈哈"
+        }
+    }
+    const s5 = symbol(obj);
+    console.log(s5);    // Symbol(哈哈哈)
+
+
+    我们创建Symbol的时候，可以给它添加一个描述，当我们想要读取这个描述的时候需要将Symbol显示转为字符串
+    let sym=Symbol("我爱代码");
+    let symStr1=sym.toString();
+    console.log(symStr1);    // Symbol(我爱代码)
+
+    我们可以看到，这样并不能够直接的拿到描述，因此ES2019提供了一个实例属性description，可以直接返回Symbol的描述
+    let symStr2=sym.description;
+    console.log(symStr2);   // 我爱代码
+
+
+    symbol函数的参数只是表示对当前Symbol值的描述，因此相同参数的symbol函数的返回值是不相等的
+    // 没有参数的情况
+    let s1=Symbol();
+    let s2=Symbol();
+    console.log(s1===s2);   // false
+
+    // 有参数的情况
+    let s3=Symbol(5);
+    let s4=Symbol(5);
+    console.log(s3===s4);   // false
+
+
+    symbol值不能与其他类型的值进行运算
+    let str1="床前明月光,";
+    let str2="疑是地上霜";
+    console.log(str1+str2);   // 拼接起来：床前明月光,疑是地上霜
+
+    let str1="床前明月光,";
+    let str3=Symbol("疑是地上霜");
+    console.log(str1+str3);   // 报错： Cannot convert a Symbol value to a string
+
+    ES5 的对象属性名都是字符串，这容易造成属性名的冲突。由于每一个symbol值都是不相等的，所以 把Symbol 值用于对象的属性名，就能保证不会出现同名的属性
+    let mySymbol = Symbol();
+
+    // 第一种写法
+    let a = {};
+    a[mySymbol] = 'Hello!';
+
+    // 第二种写法
+    let a = {
+        [mySymbol]: 'Hello!'
+    };
+
+    Symbol 值作为对象属性名时，不能用点运算符。
+    const mySym = Symbol();
+    const a = {};a.mySym = 'Hello!';
+    a[mySym]       // undefined
+    a['mySym']     // "Hello!" 
+    因为点运算符后面总是字符串，所以不会读取mySym作为标识名所指代的那个值，导致a的属性名实际上是一个字符串，而不是一个 Symbol 值。
+
+    小结：
+    1.Symbol是ES6引入的一种新的原始数据类型，它表示独一无二的值。
+    2.symbol 函数前不能使用new命令，因为它不是对象，不能添加属性。
+    3.Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，易于区分
+    4.当Symbol的参数是一个对象时，就会调用该对象的toString方法，将其转换为字符串，然后再生成一个Symbol值
+    5.ES2019提供了一个实例属性description，可以直接返回Symbol的描述
+    6.symbol函数的参数只是表示对当前Symbol值的描述，因此相同参数的symbol函数的返回值是不相等的
+    7.symbol值不能与其他类型的值进行运算
+    8.利用Symbol的独一无二性，可以把Symbol 值用于对象的属性名，就能保证不会出现同名的属性
+    9.Symbol 值作为对象属性名时，不能用点运算符。
+    10.在对象的内部，使用 Symbol 值定义属性时，Symbol 值必须放在中括号之中。
+
+    Typeof 操作符
+    一种检测当前变量的数据类型的方法
+
+类型转换:
+    数据类型转换为数字
+    Number()转换：
+       数值：转换后还是原来的值
+       Number(123) ;    //123
+
+       字符串：如果可以被破解为数值，则转换为相应的数值
+        Number(‘123’);  //123
+
+       字符串：如果不可以被破解为数值，返回NaN
+       Number(‘123abc’);  //NaN
+        空字符串转为0
+       Number(“”);      //0
+       Symbol不可以转为数值
+
+        布尔值：true转成1，false转成0
+       Number(true);    //1
+       Number(false);    //0
+       undefined：转成NaN
+       Number(undefined)    //NaN
+       Number(null)     //0
+       Number方法的参数是对象时，将返回NaN，除非是包含单个数值的数组
+       Number({a:1})    // NaN
+       Number([1,2,3])  //NaN
+       Number([7])  //7
+
+        parseInt()转换：
+       parseInt会逐个解析字符，直至找到第一个非空字符，忽略后面的非数字字符;    
+       var num1= parseInt(“123木头人”);     // 123
+       如果第一个字符不是数字符号或者负号，返回NaN;
+       var num2= parseInt(“  ”);    //NaN
+       会将小数取整（向下取整）
+       var num3= parseInt(“12.5”);  //12
+
+       parseFloat()转换：
+     与parseInt一样，唯一区别是parseFloat可以保留小数。
+       var num1= parseFloat(“123木头人”);   //123
+       var num2= parseFloat(“  ”);      //NaN
+       var num3= parseFloat(“12.5”);    //12.5
+
+        String()函数可以将任意类型的值转化为字符串,但是没法转进制字符串
+       String方法的参数如果是对象，返回一个类型字符串；
+       如果是数组，返回该数组的字符串形式
+        String({a:1})  //  “[object Object]”
+        String([1,2,3])  //  “1,2,3”
+        symbol可以转为字符串
+        let s = Symbol("hahaha");
+        let s1 = String(s); // Symbol(hahaha)
+        console.log(typeof s1, typeof s2); // string string
+
+        .toString()可以将所有的的数据都转换为字符串，但是要排除null 和 undefined
+        var boolStr = false;
+        console.log(boolStr.toString(), typeof boolStr);    // false string
+        var num = 4;
+        var numStr = num.toString();  
+        console.log(numStr, typeof numStr);   // 4 string
+        let s = Symbol("hahaha").toString();
+        console.log(typeof s); // string
+        var nullStr=null;
+        console.log(nullStr.toString());   // 报错 Cannot read property 'toString' of null
+        var undefStr=undefined;
+        console.log(undefStr.toString());  // 报错 Cannot read property 'toString' of undefined
+
+        JavaScript遇到预期为字符串的地方，就会将非字符串的值自动转为字符串。
+       字符串的自动转换，主要发生在字符串的加法运算时。当一个值为字符串，
+       另一个值为非字符串，则后者转为字符串。
+        ‘5’ + 1                        // ‘ 51 ’
+        ‘5’ + true                  //  ‘ 5true ’
+        ‘5’ + false                 //  ‘ false ’
+        ‘5’ + {}                      //  ‘ 5[object Object] ’
+        ‘5’ + []                      //  ‘ 5 ’
+        ‘5’ + function(){}    // ‘ 5function(){} ’
+        ‘5’ + undefined      // ‘ 5undefined ’
+        ‘5’ + null                 // ‘ 5null ’   
+
+    新发展 新矛盾 新目标

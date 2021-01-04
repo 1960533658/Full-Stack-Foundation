@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 控制台输出：从100到500所有自然数中不含数字4的自然数共有多少个？
+        var one,two,three,cont=0;
+        for(var i = 100;i<=500;i++) {
+            one = i%10;
+            two = (i%100-one)/10;
+            three = parseInt(i/100)
+            if (one!=4&&two!=4&&three!=4) {
+                cont++
+            }
+        }
+        alert('从100到500所有自然数中不含数字4的自然数共有'+cont+'个')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //打印3X3直角三角形
+        for(var i = 1;i <= 3;i++) {
+            for(var j = 1;j<=i;j++) {
+                document.write('*');
+            }
+            document.write('<br />');
+
+        }
+
+        //打印一行七個三角形
+        for(var j = 1;j<=7;j++) {
+            document.write('*');
+
+        }
+        document.write('<br />');
+
+
+        //打印帶空格的三角形
+        for(var m = 1;m<=3;m++) {
+            document.write('&nbsp');
+
+            for(var n = 3;n>=m;n--) {
+                document.write('*');
+                
+            }
+            document.write('<br />');
+
+        }
+    </script>
+</body>
+
+</html>

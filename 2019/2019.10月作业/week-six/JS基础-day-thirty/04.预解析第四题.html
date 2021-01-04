@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 下列代码控制台打印出的值是多少？写出执行过程
+        //预解析提升函数和声明变量:因为函数声明高于变量声明(虽然两个都是函数
+        //但是var就是声明变量)
+        // function foo() {
+        //     console.log(1)
+        // }
+        // var foo;
+
+        //接着给变量foo赋值函数
+        //打印foo
+        //结果就是执行声明变量的函数
+        //打印2
+        var foo = function () {
+            console.log(2)
+        }
+        function foo() {
+            console.log(1)
+        }
+        foo();   // 2
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: top;
+}
+
+.banner {
+    width     : 100%;
+    background: #333;
+}
+
+.centainer {
+    width : 1225px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

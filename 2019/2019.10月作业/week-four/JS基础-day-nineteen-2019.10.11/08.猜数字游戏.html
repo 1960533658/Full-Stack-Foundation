@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 我们正在玩一个猜数字游戏。 游戏规则如下：
+        // 我从 1 到 100选择一个数字，你需要猜我选择了哪个数字，根据用户
+        // 输入的数字进行比较，用户有三个输入的机会
+        // 每次你猜错了，我会告诉你这个数字是大了还是小了,如果你猜大了，输出
+        // ”猜大了”；并且需要用户再次重新输入，如果猜小了，输出”猜小了”；并且需要用户
+        // 再次重新输入，如果猜对了，则输出“恭喜你，猜对了”
+        //分析:
+            //定义一个数定义一个累减值
+            //接收用户输入的数字并判断大小
+            //让cont--
+            //对了就停止循环
+
+            //定义初始化值和累减值
+        var answer = 56;
+        var cont = 3;
+        do {
+            //用户接收
+            var num = prompt('请输入数字,共有三次机会,还剩下'+cont+'次')-0;
+            // 判断是否相等
+            if (num!= answer) {
+                // 大了小了弹出信息
+                if (num>answer) {
+                    alert('猜大了')
+                } else {
+                    alert('猜小了')
+                }
+                //自减次数
+                cont--;
+            } else {
+                //弹出对了,并停止循环
+                alert('恭喜你,猜对了')
+                break;
+            }
+
+        } while (cont>=1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

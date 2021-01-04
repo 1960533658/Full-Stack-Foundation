@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 写一个函数，判断一个数是否是素数，并返回结果true 或 false(又叫质数，只能被1和自身整数的数)
+
+        //字面量创建函数
+        function getZhi() {
+            //接收数字
+            var zhi = prompt('请输入整数')-0;
+            //记录true和false的值
+            var isNo = true;
+            //遍历这个数
+            for ( var i = 2; i < zhi; i++) {
+                //判断是不是质数
+                if (zhi%i==0) {
+                    //是,改变isno的值为false
+                    isNo = false
+                }
+            }
+            // 返回isno变量
+            return isNo
+        }
+        //接收返回的isno
+        var isNo = getZhi();
+        //打印isno判断是不是素数
+        alert(isNo)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

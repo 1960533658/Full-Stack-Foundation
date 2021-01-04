@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 需求: 求1~100以内(包含1和100)能同时被3，5整除的数的和，并将求出的和打印到控制台上.
+        //分析:
+        //遍历1-100
+        //判断能否整除并相加
+
+        //声明变量定义和
+        var sum = 0;
+        // 遍历1-100
+        for (var i = 1; i <= 100; i++) {
+            // 判断能否整除
+            if (i % 3 === 0 && i % 5 === 0) {
+                //可以就在sum的基础上累加
+                sum += i;
+            }
+        }
+        // 3.输出sum的值
+        console.log(sum);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

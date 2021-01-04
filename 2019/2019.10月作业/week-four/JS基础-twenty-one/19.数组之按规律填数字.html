@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 有一个从大到小排好序的数组[99，85，82，63，60]，现从页面输入一个数，要求按原来的规律将它插入数组中，
+        // 分析:
+        //将数字添加进数组
+        //双循环遍历数组，外部数组代表了比较多少次，内部循环代表了每一次比较这个数字要比较多少次
+        //由此我们得到外部循环要循环6次，第一次比较要比5次，每次递减一次比较的次数
+        //然后我们那到当前的这个值与他的前面的值作比较，如果这个值小于前面的值就将俩个值的位置换过来
+
+
+        //定义数组，接受并添加新数到数组
+        var arr = [99, 85, 82, 63, 60];
+        var num = prompt('请输入数字') - 0;
+        arr.push(num)
+        //要比较几次
+        for (var i = 0; i <= arr.length; i++) {
+            //每次比较要比较几个数的次数
+            for (var j = arr.length - 1; j > i; j--) {
+                //如果这个值小于前面的值就将俩个值的位置换过来
+                if (arr[j-1] < arr[j]) {
+                    arr[j] = [arr[j - 1], arr[j - 1] = arr[j]][0]
+                }
+            }
+        }
+        //打印
+        alert(arr);
+        // var num1 = 1,num2 = 2;
+        // [num1,num2] = [num2,num1]
+        // console.log(num1,num2)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 一小和尚挑水，要把水缸装满，而且每次只能挑5升水，
+        // 水缸能容纳80升水。问：小和尚要挑几次才能把水缸挑满？
+        //分析:
+            //定义初始化变量和累计值
+            //每次循环自增5但是要判断进入循环是是否小于等于80
+        //定义while循环初始化,累计变量
+        var first = 5,cont = 0;
+        while (first<=80) {
+            //判断是否大于80
+            if (first<=80) {
+                //累加并自增五
+                cont++;
+                first+=5;
+            }else {
+                //超过就停止循环
+                break;
+            }
+        }
+        //打印
+        alert('小和尚要挑'+cont+'次才能把水缸挑满')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

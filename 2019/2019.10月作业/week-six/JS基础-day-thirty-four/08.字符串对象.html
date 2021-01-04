@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        // var a = 'aaa';
+        // a = 'bbb';
+        // a+='ccc';
+        // console.log(a)
+
+        var str = 'sdaasdsafaffewggds';
+        //length属性可以获取字符串的长度(个数)
+        // var len = str.length;
+        // alert(len);
+
+        //通过下标直接获取某个数
+        // for(var i = 0;i<=str.length;i++) {
+        //     //遍历字符串获取每一个值
+        //     console.log(str[i])
+        // }
+        // alert(str[2])
+
+        //获取字符串的某个值和length效果一样但是这是一个方法
+        //且不能获取长度
+        // var d = str.charAt(0)
+        // alert(d)
+
+        //concat();方法凭借字符串,效果等同于+,返回新的字符串不会改变原来的str
+        // var str2 = 'sss'
+        // var str2 = str.concat(str2);
+        // document.write(str2,str2.length)
+
+        // /截取固定位置的字符串,不会减少原字符串,返回新的字符串,根据索引值来截取最后一个值的索引取不到
+        // var str2 = str.slice(10,15);
+        // document.write(str2)
+
+        // /截取固定位置的字符串,不会减少原字符串,返回新的字符串,根据索引值来截取最后一个值的索引取不到
+        // var str2 = str.substring(10, 15);
+        // document.write(str + '<br />' + str2+);
+
+
+        //从索引为10开始的值为起点截取5个不会减少原字符串,返回新的字符串
+        // var str2 = str.substr(10,5);
+        // document.write(str + '<br />' + str2);
+
+        //自左而右找到第一个字符是a的索引值
+        //lastindexof从末尾开始找效果和indexof一样都是只能找一个
+        // console.log(str.indexOf('a'));
+
+        //只能!!!!去除两端空白
+        // var str2 = ' ab c ';
+        // str = str2.trim();
+        // console.log(str);
+
+
+        // var str = 'love';
+        // //全部字符串转大写,返回大写字符串
+        // var e = str.toLocaleUpperCase();
+        // //全部字符串转小写,返回小写字符串
+        // var a = str.toLocaleLowerCase();
+        // console.log(e,str,a);
+
+        //替换字符串,c替换a,只能替换第一个a
+        // var str2 = str.replace('a','c');
+        // console.log(str2);
+
+        //会拆分成数组,去除f将f为分割化成逗号🐥🐓🐘🐒🍌🍉🍎🍑👨👩⭐😔❤
+        //🗡🛡🙂😟🤯😳🔍
+        // var str3 = '🗡🛡🐥🐓🐘🐒🍌🍉🍎🍑👨👩⭐😔🙂😟🤯😳❤'
+
+        // var strSplit = str.split('f');
+        // var str4 = str.split('');
+        // console.log(str,strSplit,str3,str4)
+
+        //把'我爱中华人民共和国'中中华输出到控制台
+        // var str = '我爱中华人民共和国';
+        // //拆分字符串输出
+        // var strSplit = str.split('');
+        // console.log(strSplit[2]+strSplit[3]);
+        // //查找索引值输出
+        // var zhong = str.indexOf('中');
+        // var hua = str.indexOf('华');
+        // console.log(str[zhong]+str[hua])
+
+        // var eng = '我是康春龙'
+        // var kang = eng.indexOf('康')
+        // var chun = eng.indexOf('春')
+        // var long = eng.indexOf('龙')
+        // console.log(eng[kang]+eng[chun]+eng[long])
+
+        //'qweqweoeqwer opweqwerodfsdo'查找字符串中所有的字母’o‘出现的位置
+        //把字符串中所有的’0’替换成‘-’
+        //分析：拆分字符串再遍历寻找每个o的可以找到它的位置；
+        var strO = 'qweqweoeqwer opweqwerodfsdo'
+        // var newStr = '';
+        // var strOSplit = strO.split('');
+        // console.log(strOSplit);
+        // for(var i = 1; i < strOSplit.length; i++) {
+        //     if (strOSplit[i]=='o') {
+        //         console.log(i)
+        //         strOSplit[i] = '-'
+        //     }
+        //     newStr+=strOSplit[i]
+        // }
+        // console.log(newStr);
+
+
+        for (var i = 0; i < str.length; i++) {
+            // 只能打印出来19个
+            console.log(strO[i])
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        console.log(3+2||0&&true)  
+        //5,5为true,0为false,true不变,比较先比与的结果为false,去后面的值继续
+        //比较3+2||0得false,最终去前面的5
+        console.log(undefined&&5) 
+        //undefined,undefined为false,5为true结果false,去前面的值.
+        console.log(1&&2&&3)   // 短路运算
+        //3,为与都为true,去后面的值,3
+        console.log(1&&0&&3) 
+        //0,都为与,true,false,true.第一段为false去前面的值,第二段
+        //为false,去前面的值.0
+        console.log(2+3>1&&4|| 4&&5%6) 
+        //4  true&&4||4&&5   4||5    结果为4
+        console.log(5+10/2&&4>3||7-4)  
+        //  10&&true||3 true||3     true
+        // false在哪就取哪个位置
+        //  &&真取后面的
+        //  ||真取前面的
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

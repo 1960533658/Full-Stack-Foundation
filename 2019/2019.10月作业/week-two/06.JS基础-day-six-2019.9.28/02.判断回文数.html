@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 录入一个5位数,判断 该五位数是否为回文数。（
+        // 判断第一位和第五位是否一样，第二位和第四位是否一样）
+        
+        var back = parseInt(prompt());
+        var one,two,three,four,five
+        one = back%10;
+        two = (back-one)%100/10;
+        three = (back-one-10*two)%1000/100
+        four = (back-one-10*two-100*three)%10000/1000
+        five = (back-one-10*two-100*three-1000*four)/10000
+
+        //是否是五位数
+        if(back>10000&&back<=99999) {
+            if(one==five&&two==four) {
+                alert('是一个回文数')
+            }else {
+                alert('他不是一个回文数')
+            }
+        }else {
+            alert('不是一个五位数')
+        }
+   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 需求: 求1!+2!+3!+...+10!的和
+        //分析:
+        //定义外部变量为0记录和
+        //外部循环定义1-10十个数
+        //内部从一开始循环记录乘积
+
+        //定义变量记录和
+        var sum = 0;
+        // 外部循环遍历1-10
+        for (var j = 1; j <= 10; j++) {
+            //初始为1的变量记录每个数的阶乘
+            var jie = 1;
+            //遍历小于i的阶乘数
+            for (var i = 1; i <= j; i++) {
+                //纪录当前阶乘
+                jie = jie * i;
+            }
+            // 记录当前阶乘和
+            sum += jie;
+        }
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

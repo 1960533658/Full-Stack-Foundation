@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 求1到100之间的累加值，其中不包含个位数为9的数字（while实现）
+        //分析:
+            //while循环100-200所有的数字
+            //判断是不是9的倍数
+            //累加
+            //打印
+        var i = 1, sum = 0;
+        while (i <= 100) {
+            if (i % 10 != 7) {
+                sum += i;
+            }
+            i++;
+        }
+        alert(sum)
+    </script>
+</body>
+
+</html>

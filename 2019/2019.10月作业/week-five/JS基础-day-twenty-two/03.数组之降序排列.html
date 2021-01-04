@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 3.按照从大到小的顺序排列 ，var arr= [10, 5, 34, 59, 98],最后打
+        // 印排序后的数组。
+
+        var arr= [10, 5, 34, 59, 98];
+        //外部遍历arr用以于每个值作比较
+        for (var i = 0; i < arr.length; i++) {
+            //内部遍历arr用于与让arr[i]和数组中的每个值作比较
+            for(var j = 0; j< arr.length-1-i; j++) {
+                //判断当前值和上一个的大小值能否升序排列
+                if (arr[j]<arr[j+1]) {
+                    //不符合就替换值
+                    arr[j] = [arr[j+1],arr[j+1] = arr[j]][0]
+                }
+            }
+        }
+        console.log(arr);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 利用JavaScript完成如下功能：判断如果a>60，则b=1；如果a>70，则b=2；如果a>80，则b=3；如果a>90，则b=4 ,在页面弹出对应b的值        let a = prompt('请输入大于0小于100的数字') - 0;
+        //接收数字
+        var num = prompt('请输入数字') - 0;
+        //将数字/10作为区间范围
+        a = parseInt(a / 10)
+        //switch循环
+        switch (a) {
+            //a是6 返回1
+            case 6:
+                alert('1')
+                break;
+            //a是7 返回2
+            case 7:
+                alert('2')
+                break;
+            //a是8 返回3
+            case 8:
+                alert('3')
+                break;
+            //a是9 返回4
+            case 9:
+                alert('4')
+                break;
+            default:
+                alert('你就不能听话好好输入吗？？？')
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

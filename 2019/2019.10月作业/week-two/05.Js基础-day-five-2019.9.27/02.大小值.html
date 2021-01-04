@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .求任意三个数字的最大值和最小值
+
+        //随意的一组数
+        var num1 = 888, num2 = 4, num3 =0;
+        //会出现情况:
+        //第一步:首先判断最大值,因为有三个数所以最大数有三种可能,即先确认最大值,ifelse判断式判断三遍
+        //第二步:然后再判断剩下的两个值,所以有分裂除了两种情况,所以在确认最大值以后再其if判断句式中再写两段for分支
+
+
+        //①最大值情况1、num1最大打印最大值
+        if(num1>num2&&num1>num3) {
+            console.log('最大值是：'+num1);
+
+            // ④开始最小值判断,num1最大的情况下的只有两种情况num3或num2最小首先判断式判断num2最小的情况
+            if(num2>num3) {
+                console.log('最小值是：'+num3);
+            //num1最大的情况下只剩下最后的一种情况
+            }else{
+                console.log('最小值是：'+num2);
+            }
+
+            //② 最大值情况2、num2最大打印最大值
+        }else if(num2>num1&&num2>num3) {
+            console.log('最大值是：'+num2);
+
+            //⑤ num2最大的情况下的依然只有两种情况num1或num3最小首先判断式判断num1最小的情况
+            if(num1>num3) {
+                console.log('最小值是：'+num3);
+            //num2最大的情况下依然只剩下最后的num3最小的情况打印它
+            }else{
+                console.log('最小值是：'+num1);
+            }
+
+            //③只有三个值三种情况,不在写判断式直接输出最大值
+        }else {
+            console.log('最大值是：'+num3);
+
+            // ⑥ num3最大的情况下的依然只有两种情况num1或num2最小首先判断式判断num1最小的情况
+            if(num1>num2) {
+                console.log('最小值是：'+num3);
+            //num3最大的情况下依然只剩下最后的num2最小的情况打印它
+            }else{
+                console.log('最小值是：'+num2);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

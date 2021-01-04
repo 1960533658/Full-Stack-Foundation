@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 下列代码控制台打印出的值分别是多少？
+        function f1() {
+            this.user = "二狗子";
+        }
+        var a = new f1();
+        // 构造函数创建对象this指向新创建的对象
+        //之后打印a.user因为已经创建完毕，所以user=二狗子
+        alert(a.user);  // 二狗子
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

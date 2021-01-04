@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 100以内7的倍数的总和(while实现)
+        //分析:
+            //while循环设定初始值,判断式,步进,
+            //接受7的倍数总和
+
+        //while循环初始值和总和
+        var i = 1,sum = 0;
+        //while循环判断式
+        while (i<=100) {
+            //7的倍数判断
+            if (i%7==0) {
+                sum+=i;
+            }
+            //步进
+            i++;
+        }
+        alert('100以内7的倍数的总和为：'+sum)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

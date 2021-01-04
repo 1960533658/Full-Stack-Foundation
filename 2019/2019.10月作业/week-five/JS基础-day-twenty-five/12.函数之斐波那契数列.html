@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 写一个函数，求斐波那契数列fibonacci中的第n个数是多少？？1  1  2  3  5   8  13  21 
+        //定义自调用函数
+        (function () {
+            //初始化前两个值
+            var one = 1, two = 1;
+            var nge = 0
+            //接收第几个数
+            var n = prompt('请输入第几个斐波那契数列的值') - 0;
+            for (var i = 3; i <= n; i++) {
+                if (n == 1 || n == 2) {
+                    nge = 1
+                    alert('第' + n + '个数是'+nge)
+                    break;
+                } else {
+                    nge = one + two;
+                    // 4.2 进行值的传递: m1=m2
+                    one = two;
+                    // 4.3 进行值的传递: m2=m3;
+                    two = nge;
+                }
+            }
+            alert('第' + n + '个数是'+nge)
+        })()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .现在有2个数组，var arr1 = [1,7,9,11,8,15,10,19],var arr2 =[2,1,6,8,10]
+        // 将2个数组合并为一个数组，并将数组去重，然后按照升序进行排列
+
+        //定义数组
+        var arr1 = [1,7,9,11,8,15,10,19], arr2 =[2,1,6,8,10];
+        //拼接数组
+        var arr = arr1.concat(arr2);
+        //外部遍历arr用以于每个值作比较
+        for (var i = 0; i < arr.length; i++) {
+            // 内部遍历arr用于与让arr[i]和数组中的每个值作比较
+            for (var j = 0; j < arr.length;j++) {
+                //判断值和下标的相等情况
+                if (i!=j&&arr[i]==arr[j]) {
+                    //删除一样的部分
+                    arr.splice(j,1);
+                }
+            }
+        }
+        //数组升序
+        arr.sort(function(a,b){ return b-a});
+        //打印
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

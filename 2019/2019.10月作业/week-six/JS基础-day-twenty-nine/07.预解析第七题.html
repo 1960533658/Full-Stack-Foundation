@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 下列代码控制台打印出的值是多少？并且把预解析的过程写出来
+        //提取全局变量和函数
+        //var a;
+        // function a(b) {
+        //     console.log(b);  // ?
+        //     function b() {
+        //         console.log(b); //?
+        //     }
+        //     b();
+        // }
+        // function c() { return 123; }
+        //执行a(c)
+
+
+        //结果报错
+        //自己分析(不专业)
+        //首先a是全局变量,但是a又被重新赋值成了函数!!!!不对
+        //在解析JS代码时函数的优先级高于变量声明
+        //即,后面函数a被var a覆盖掉了
+        //然后调用函数,因为函数a被变量覆盖了,函数不存在即a报错 a is no a function
+
+
+        var a = 25;
+        function a(b) {
+            console.log(b);  // ?
+            function b() {
+                console.log(b); //?
+            }
+            b();
+        }
+        a(c);
+        function c() { return 123; }
+
+        //自己的小测试:
+        // 上面注释说到预解析时函数的优先级高于函数,在之后才是变量声明,而JS代码又是
+        // 自上而下执行,所以会被变量声明覆盖,执行函数不存在(这里有个坑,要注意后面的
+        // 注释我会解释)
+                // 1.如果声明变量和函数同名同时存在且调用函数,变量有值(同名)
+                //   此时如果打印a的值就是2,如果执行函数就是a is no a function,
+                //   因为函数a是最先预解析,随后被变量声明覆盖即函数a不存在
+
+                // 2.如果声明变量不赋值(undefined),a一直都是函数完全可以执行(这就是上面的坑)
+        // var a = 2;
+        // function a(params) {
+
+        // }
+        // a(2)
+        // console.log(a)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

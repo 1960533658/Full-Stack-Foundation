@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 需求: 鸡兔同笼：鸡和兔子一共35只，笼子里一共有94只脚，用程序计算出鸡和兔子分别多少只
+        // 定义两个循环一个为鸡的循环,一个是兔的循环
+        //内部循环中判断符合的各个条件
+
+        //外部为鸡的个数
+        for (var i = 0; i < 35; i++) {
+        //内部为兔的个数
+            for (var j = 0; j < 35; j++) {
+                //判断条件
+                if (i * 2 + j * 4 === 94 && (j + i) === 35) {
+                    console.log("鸡有" + i + "只");
+                    console.log("兔有" + j + "只");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

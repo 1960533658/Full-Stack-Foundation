@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 一个函数，该函数用于计算一个正数的因子和（比如6的因子和是1+2+3+6=12）
+        //定义自调用函数
+        (function () {
+            //接收数字
+            var num = prompt('请输入一个数字')-0;
+            //定义和
+            var sum = 0;
+            for (var i = 1; i <= num; i++) {
+                if (num%i==0) {
+                    sum+=i;
+                }
+            }
+            alert(num+'的因子和是:'+sum)
+        })()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+// header 样式
+$headerHeight: 40px;
+$headerBackgroundColor: #c91523;
+$headerCursor: pointer;
+
+// header-logo 样式
+$logoTop:10px;
+$logoLeft:10px;
+$logoWidth: 58px;
+$logoHeight: 20px;
+$logoBackgroundPosition: 0px -109px;
+$logoMargin: 0 55px 78px 0;
+
+// header-search 样式
+$HeaderSearchHeight:40px;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $headerHeight;
+    background-color: $headerBackgroundColor;
+    cursor: $headerCursor;
+
+    .header-logo {
+        position: absolute;
+        top: $logoTop;
+        left: $logoLeft;
+        width: $logoWidth;
+        height: $logoHeight;
+        background-position: $logoBackgroundPosition;
+    }
+
+    .header-search {
+        position: relative;
+        width: 100%;
+        height: $HeaderSearchHeight;
+        margin: $logoMargin;
+    }
+}

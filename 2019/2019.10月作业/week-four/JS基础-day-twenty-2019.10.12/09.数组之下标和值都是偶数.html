@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 定义一个整数数组，包含元素[1,3,4,7,8]，获取数组中数组
+        // 角标和对应的元素都为偶数的元素与个数，并在控制台打印输出。
+        //分析: 
+            //遍历判断下标和值的奇偶数并打印
+            //变量自增1
+
+
+            //定义数组和累加变量
+            var arr = [1,3,4,7,8], cont = 0;
+            // 遍历数组
+            for(var i = 0;i < arr.length; i++) {
+                if (i%2==0&&arr[i]%2==0) {
+                    cont++;
+                    document.write('角标和对应的元素都为偶数的元素是:'+arr[i]+'<br />');
+                }
+            }
+            document.write('角标和对应的元素都为偶数的元素的个数是:'+cont);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

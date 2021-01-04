@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        h3 {
+            padding-left: 10px;
+        }
+
+        .type {
+            width: 100%;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table
+        }
+
+        .clearfix::after {
+            clear: both
+        }
+
+        .clearfix {
+            *zoom: 1
+        }
+
+        .type ul {
+            width: 100%;
+            padding-left: 10px;
+        }
+
+        .type li {
+            float: left;
+            width: 33.33%;
+        }
+
+        .type a {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: #505050;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+        }
+
+        .type a:nth-last-child(-n+3) {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .type a:last-child {
+            border-right: 1px solid #ccc;
+        }
+
+        .hot1 {
+            width: 100%;
+        }
+
+        .hot1 ul {
+            width: 100%;
+            padding-left: 10px;
+
+        }
+
+        .hot1 li {
+            float: left;
+            width: 33.33%;
+        }
+
+        .hot1 li a {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .hot1 li a img {
+            width: 100%;
+        }
+
+        .hot1 li a p {
+            width: 100%;
+            color: #505050;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>热门推荐</h3>
+    <div class="type clearfix">
+        <ul>
+            <li><a href="javascript:;">手机</a></li>
+            <li><a href="javascript:;">笔记本</a></li>
+            <li><a href="javascript:;">空调</a></li>
+            <li><a href="javascript:;">收纳用品</a></li>
+            <li><a href="javascript:;">炒锅</a></li>
+            <li><a href="javascript:;">奶粉</a></li>
+            <li><a href="javascript:;">吸顶灯</a></li>
+            <li><a href="javascript:;">儿童文学</a></li>
+        </ul>
+    </div>
+    <h3>热门导购</h3>
+    <div class="hot1">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_1.jpg" alt="">
+                    <p>国际名牌</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_2.jpg" alt="">
+                    <p>JD FOR</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_3.jpg" alt="">
+                    <p>精品女装</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <h3>热卖品类</h3>
+    <div class="hot1">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_4.jpg" alt="">
+                    <p>连衣裙</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_5.jpg" alt="">
+                    <p>短袖T恤</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_6.jpg" alt="">
+                    <p>短袖雪纺裙</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="hot1">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_7.jpg" alt="">
+                    <p>白衬衫</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_8.jpg" alt="">
+                    <p>阔腿裤</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/sort_9.jpg" alt="">
+                    <p>短裤</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

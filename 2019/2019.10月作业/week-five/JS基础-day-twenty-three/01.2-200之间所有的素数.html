@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1、输出2-100之间的所有素数（素数就是只能被1和其本身整除的数）
+
+        //控制变量法初始化
+        var flag = true;
+        // 遍历2-200之间所有的数字
+        for (var i = 2; i <= 200; i++) {
+            //遍历每个i之前的所有数字
+            for (var j = 2; j < i; j++) {
+                //判断断i%j是否可以整除
+                if (i % j == 0) {
+                    //是就改变flag的值
+                    flag = false;
+                }
+            }
+            //在内部循环的外面判断flag的值,如果值没变说明他没有被整除
+            //打印素数
+            if (flag) { 
+                //打印素数i
+                document.write('素数为:' + i + '<br />');
+            }
+            flag = true;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

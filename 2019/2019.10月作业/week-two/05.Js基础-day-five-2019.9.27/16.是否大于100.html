@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 录入两个整数a和b,若a+b大于100,则输出a+b大于100的部分,否则输出两数之和.
+        //分析:
+        //      1.获取变量
+        //      2.判断是否大于100,大于求差
+        //      3.不大于就求和
+        var a = parseInt(prompt('请输入第一个数字'))
+        var b = parseInt(prompt('请输入第二个数字'))
+        
+        //判断两数之和是否大于100,大于求差
+        if(a+b>100) {
+            var rest = a+b-100;
+            alert('比一百大'+rest)
+        //小于求和
+        }else{
+            alert('两个数的和是'+(a+b));
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

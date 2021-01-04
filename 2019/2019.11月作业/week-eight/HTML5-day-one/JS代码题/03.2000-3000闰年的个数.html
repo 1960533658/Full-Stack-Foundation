@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 3.求2000-3000年之间的所有的闰年以及个数
+        let count = 0;
+        for (let i = 2000; i <= 3000; i++) {
+            if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
+                console.log(i)
+                count++;
+            }
+        }
+        alert('2000-3000年之间的所有的闰年个数是：' + count) - 0;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

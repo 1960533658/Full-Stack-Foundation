@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 输出下列代码a的值分别是多少？并且把预解析的过程写出来
+        //1.提取声明变量和function代码体
+        //代码:
+        // var a
+        // function abc() {
+        //     alert(a);   // ?
+        //     var a = 10;
+        // }
+        //2.调用函数
+        //函数内部提取声明变量
+        //代码:var a
+        //函数内部打印a就是undefined
+        // 3.打印a因为function是局部变量所以a不等于10
+        //a是25
+        var a = 25;
+        function abc() {
+            alert(a);   // undefined
+            var a = 10;
+        }
+        abc();
+        alert(a)  //5  
+    </script>
+</body>
+
+</html>

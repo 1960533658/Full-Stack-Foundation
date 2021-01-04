@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 数组[10, 5, 34, 59, 98], 使用for循环找出里面的最大值? 使用while循环找出里面的最小值?
+
+        //定义数组和初始最大值最小值
+        var arr = [10, 5, 34, 59, 98], max = arr[0], min = arr[0];
+        // for循环遍历取最大
+        for (var i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i]
+            }
+        }
+        //打印最大值
+        alert('for循环找出里面最大的值是：' + max)
+        //while循环遍历最小
+        var j = 1;
+        while (j < arr.length) {
+            //找到最小值
+            if (min > arr[i]) {
+                min = arr[i]
+            }
+            j++;
+        }
+        //打印最小值
+        alert('while循环找出里面最小的值是：' + min)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

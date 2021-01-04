@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 求1~100以内(包含1和100)能同时被3，5整除的数的和，并将求出的和打印到控制台上.(while实现)
+        // 找到15的倍数,累加和
+
+        //定义初始化,和累加
+        var i = 1, sum = 0;
+        while (i <= 100) {
+            //判断是不是15的倍数
+            if (i % 15 == 0) {
+                //累加
+                sum += i;
+            }
+            //步进
+            i++;
+        }
+        //打印
+        console.log(sum);
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

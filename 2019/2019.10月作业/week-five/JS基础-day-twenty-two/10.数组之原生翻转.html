@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .将下面的数组元素前后互换，不能定义新
+        // 的数组，在原数组上面操作，需要第一个元素和最后一个元素
+        // 互换位置，第二个元素和倒数第二个元素互换位置，依次类推
+        //   [11, 32，66, 47，79，23，89]	
+        //         置换后的数组元素为：
+        //           [89, 23, 79, 47, 66, 32, 11]
+
+        //定义数组
+        var arr = [11, 32, 66, 47, 79, 23, 89];
+        //外部遍历arr用以于每个值作比较
+        for (var i = 0; i < arr.length; i++) {
+            // 内部遍历arr用于与让arr[i]和数组中的每个值作比较
+            for (var j = 0; j < arr.length; j++) {
+                // if (arr.length%2==0) {
+
+                // }
+                //判断如果i+j+1==length说明ij是对应的索引
+                if (i + j + 1 == arr.length) {
+                    // 因为当i的值大于索引的一半会把转好的数组翻转翻转成原数组
+                    if (i>parseInt(arr.length/2)+1) {
+                        //当i大于(小于也是一样,它会在大于一般的时候翻转)arr.length的一半立即停止
+                        break;
+                    }
+                    //相互赋值
+                    arr[i] = [arr[j], arr[j] = arr[i] ][0]
+                }
+            }
+        }
+        console.log(arr)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

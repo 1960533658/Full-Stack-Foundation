@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 求100到200之间所有的奇数的和（while实现）
+        //分析:
+            //while循环100-200所有的数字
+            //判断是不是奇数
+            //累加
+            //打印
+        var i = 100, sum = 0;
+        while (i <= 200) {
+            if (i % 2 != 0) {
+                sum+=i;
+            }
+            i++;
+        }
+        alert('100到200之间所有的奇数的和为:'+sum)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

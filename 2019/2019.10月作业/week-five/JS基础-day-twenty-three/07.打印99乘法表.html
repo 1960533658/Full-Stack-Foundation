@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        th:nth-child(odd) {
+            background: skyblue;
+        }
+        th:nth-child(even) {
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 利用JavaScript完成如下九九乘法表
+        //打印的表格标签是可有可无的但是
+
+        //!!!!!大哥你滴作业没有我的好看
+        document.write('<table width="600">')
+        //遍历1-9,外部循环代表了乘法左边的值和几行
+        for (var i = 1; i <= 9; i++) {
+            document.write('<tr align="center">')
+            //遍历内部循环,代表了一行几个(列)且每行不能超过行数
+            for(var j = 1; j <= i; j++) {
+                document.write('<th border="1">')
+
+                //打印乘法算式
+                document.write(i + 'X' + j + '=' + j * i)
+                document.write('</th>')
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>')
+    </script>
+</body>
+</html>

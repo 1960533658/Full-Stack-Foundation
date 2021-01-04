@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //1
+        var v1 = 'abc';
+        var v2 = v1;
+        var v2 = '123' + v2;
+        alert(v2);//'123abc'
+        alert(v1);//'abc'
+
+        //2
+        var a = {
+            name: '张三',
+            age: 22
+        }
+        var b = a;
+        alert(b.age)//22
+        b.age = 23
+        alert(a.age)//22
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

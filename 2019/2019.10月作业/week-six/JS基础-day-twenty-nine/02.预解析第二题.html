@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 2.输出下列代码a的值分别是多少？并且把预解析的过程写出来
+        //代码:
+        // var a;
+        // var a;
+        // function abc() {
+        //     alert(a);   
+        //     var a = 10;
+        // }
+        //给a赋值25
+        //2.调用函数
+        //函数内部提取声明变量
+        //先打印a,因为a在内部暂时未声明a去外部找a的值是25
+        //代码:a未声明赋值是全局变量a是10
+        // 3.外部打印a.因为function是局部变量a未声明直接赋值之后a
+        //是10;打印25
+        var a = 25;
+        var a = 25;
+        function abc() {
+            alert(a);   // 25
+            a = 10;
+        }
+        abc();
+        alert(a)  //10
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var users = [
+            //用户编号 用户名 密码 权限 
+            { userId: "u01", userName: "曹操", upwd: 123, uadministor: "管理员" },
+            { userId: "u02", userName: "许褚", upwd: 123, uadministor: "普通用户" },
+
+            { userId: "u03", userName: "徐晃", upwd: 123, uadministor: "普通用户" },
+            { userId: "u04", userName: "张辽", upwd: 123, uadministor: "普通用户" }
+        ];
+        var out = 0;
+        while (true) {
+            if (out != 0) {
+                break;
+            }
+            //登录判断输入账号,并比较信息
+            let inputName = prompt('请输入用户名');
+            let inputpsd = prompt('请输入密码');
+            var flag;
+            var nb;
+            //循环判断是否拥有用户名密码
+            for (var i = 0; i < users.length; i++) {
+                if (inputName != users[i].userName) {
+                    flag = false;
+                } else if (inputpsd == 123) {
+                    flag = true
+                    //判断是不是管理员
+                    if (users[i].uadministor == '管理员') {
+                        nb = 'vip';
+                    }
+                    var userindex = i;
+                    break;
+                } else {
+                    alert('用户名密码错误请重新输入')
+                    continue;
+                }
+            }
+            if (flag) {
+                //用户操作
+                while (true) {
+                    if (out != 0) {
+                        break;
+                    }
+                    var userDo = prompt(`尊敬的${users[userindex].userName}${users[userindex].uadministor}欢迎光临\n
+                    1.查看所有用户列表
+                    2.修改用户密码
+                    3.退出程序
+                    `, '请输入1-3') - 0;
+                    while (true) {
+                        //为3退出程序
+                        if (userDo == 3) {
+                            alert('欢迎下次光临')
+                            out++;
+                            break;
+                        }
+
+                        //     //为2时修改密码//判断用户是不是
+                        if (userDo == 2) {
+                            //同过id修改对行的密码
+                            if (nb == 'vip') {
+
+                                let setId = prompt('请要输入编号')
+                                for (let i = 0; i < users.length; i++) {
+                                    if (users[i].userId == setId) {
+                                        let setpwd = prompt('请新输入密码')
+                                        users[i].upwd == setpwd
+                                        break;
+                                    }
+                                }
+                            } else {
+                                alert('对不起您不是管理员')
+                            }
+                            break;
+                        }
+
+                        //     //为1查看用户列表
+                        if (userDo == 1) {
+                            var lookStr = `用户编号 用户名 密码 权限 \n`
+                            for (let i = 0; i < users.length; i++) {
+                                lookStr += `${users[i].userId}   ${users[i].userName}    ${users[i].upwd}    ${users[i].uadministor}\n`
+                            }
+                            alert(lookStr)
+                            break;
+                        }
+                    }
+                }
+            } else {
+                alert('用户名密码错误请重新输入')
+                continue;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

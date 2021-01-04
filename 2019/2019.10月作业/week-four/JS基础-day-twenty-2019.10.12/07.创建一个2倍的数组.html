@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //  已有数组var nums = [5,10,15],要求创建一个新数组
+        // 1.新数组的长度和已知数组相同
+        // 2.新数组每个元素的值，是已知对应位置元素的2倍
+        // 3.在控制台中打印新数组的所有元素
+        //分析:
+        //创建一个原数组和一个空数组
+        //遍历数组翻倍添加
+        //打印
+
+        //定义数组和新数组
+        var nums = [5, 10, 15],newNums = [];
+        //添加长度
+        newNums.length = nums.length;
+        // 打印长度
+        console.log(newNums.length);
+        // 遍历原数组
+        for(var i = 0; i < nums.length; i++) {
+            // 每个值都*2添加
+            newNums[i] = nums[i]*2;
+            //打印每个值
+            console.log(newNums[i])
+        }
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

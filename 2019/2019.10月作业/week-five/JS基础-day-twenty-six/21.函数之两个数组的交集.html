@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 给定两个数组，编写一个函数来计算它们的交集。(查重)
+        function arr() {
+            //遍历两个数组
+            for (var i= 0; i< arguments[0].length; i++) {
+                for (var j = 0; j < arguments[1].length; j++) {
+                    //判断是否相等
+                    if (arguments[0][i]==arguments[1][j]) {
+                        // 打印
+                        console.log(arguments[0][i])
+                    }
+                }
+
+            }
+            
+        }
+        arr([1,2,3,4],[3,2,1])
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

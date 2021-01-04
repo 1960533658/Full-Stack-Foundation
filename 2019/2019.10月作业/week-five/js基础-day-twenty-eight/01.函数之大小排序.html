@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .用函数实现任意数组从小到大的排序，不允许使用sort 
+        //定义数组
+        var arr = [31, 42, 73, 53, 13, 63, 131];
+        //调用方法
+        console.log(getSortArr(arr));
+        //创建方法 传递数组参数
+        function getSortArr(arr) {
+            for (var i = 0; i < arr.length - 1; i++) {
+                for (var j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var num = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = num;
+                    }
+                }
+            }
+            //返回排序后的数组
+            return arr;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

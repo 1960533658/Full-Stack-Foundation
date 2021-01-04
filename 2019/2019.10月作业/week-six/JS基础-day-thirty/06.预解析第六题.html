@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // .下列代码控制台打印出的值是多少？写出执行过程
+        //预解析提升函数和声明变量:
+        // function test() {
+        //     let x = 31;
+        //     if (true) {
+        //         let x = 71;
+        //         console.log(x) // ?
+        //     }
+        //     console.log(x) // ? 
+        // }
+        //代码继续往下执行
+        //调用函数test
+        //let不能提升而且只是局部变量
+        //声明并赋值x为31
+        //判断if可进入
+        // let定义变量x是71(局部)
+        //打印x     //结果是71
+        // 结束判断式
+        //打印x,if中的let声明是块级作用域不影响外部即x依然是31
+
+        function test() {
+            let x = 31;
+            if (true) {
+                let x = 71;
+                console.log(x) // 71
+            }
+            console.log(x) // 31
+        }
+        test()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

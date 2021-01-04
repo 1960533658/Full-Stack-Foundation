@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //打印菱形
+        //分析：分两步打印，一次一部分，在内部循环上面再打印_
+
+        //打印上半部分三角形
+        for (var i = 1; i <= 4; i++) {
+            //打印_
+            for (var m = 3; m >= i; m--) {
+                document.write('-')
+            }
+            for (var j = 1; j <= i * 2 - 1; j++) {
+                document.write('*')
+            }
+            document.write('<br />')
+
+        }
+        //打印下半部分
+        for (var i = 0; i < 3; i++) {
+            //打印空格
+            for (var n = 0; n <= i; n++) {
+                document.write('-')
+            }
+
+            //打印*
+            for (var j = 4; j >= i * 2; j--) {
+                document.write('*');
+            }
+            document.write('<br />');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

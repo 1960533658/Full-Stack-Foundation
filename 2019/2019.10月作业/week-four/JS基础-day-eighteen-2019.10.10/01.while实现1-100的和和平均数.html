@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. 1-100之间所有数的总和 与 平均值(while实现)
+        //分析：
+            //遍历1-100所有的数
+            //while循环设定初始值,判断式,步进
+            //增加变量计算综合和1-100之间有多少个数字
+        var i = 1;
+        var cont=0;
+        var sum = 0;
+        while (i<=100) {
+            sum+=i;
+            cont++;
+            i++;
+        }
+        alert('1-100之间所有数的总和为：'+sum+'平均值为：'+sum/cont)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

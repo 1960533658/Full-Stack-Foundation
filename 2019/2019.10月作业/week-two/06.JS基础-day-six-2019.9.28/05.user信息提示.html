@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //  收先接收用户输入的用户名，判断该用户名是否是admin,如果
+        //  不是直接程序终止，如果是那么再次提示让用户输入密码,如果
+        //  密码是88888,那么提示登录成功，否则提示登录失败
+        var userName = prompt('请输入名字');
+        var userPas = parseInt(prompt('请输入密码'));
+        if (userName == 'admin') {
+            if(userPas == 88888) {
+                alert('你真棒');
+            }else {
+                alert('你个傻X,密码都记不住')
+            }
+        } else {
+            alert('错误')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

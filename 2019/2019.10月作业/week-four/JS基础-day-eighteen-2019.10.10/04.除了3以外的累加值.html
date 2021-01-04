@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 4.  求整数1～100的累加值，但要求跳过所有个位为3的数(while实现)
+        //分析:
+            //while循环遍历1-100
+            //判断i的个位数是否等于3
+            //累加
+            //打印
+        var i = 1, sum = 0;
+        while (i <= 100) {
+            if (i%10!=3) {
+                sum+=i;
+            }
+            i++;
+        }
+        alert(sum)
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

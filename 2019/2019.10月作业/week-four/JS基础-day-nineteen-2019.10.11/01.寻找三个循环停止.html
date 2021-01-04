@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1. 打印1-100中前三个是17的整数倍的数。
+        //分析:打印1-100
+        //找到17的倍数
+        //定义变量累计个数,达到就break
+
+        //定义变量累计个数
+        var cont=0;
+        //遍历1-100
+        for(var i = 1;i<=100;i++) {
+            //找到17的倍数打印并累加个数
+            if (i%17==0) {
+                document.write(i+'<br />');
+                cont++;
+                //达到三次结束循环
+                if (cont==3) {
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

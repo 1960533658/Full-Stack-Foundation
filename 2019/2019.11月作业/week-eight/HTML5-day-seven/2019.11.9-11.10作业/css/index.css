@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+.hotop {
+    width        : 1520px;
+    height       : 120px;
+    margin       : 0 auto;
+    padding-top  : 40px;
+    padding-right: 30px;
+}
+
+body {
+    width: 100%;
+}
+
+/* 左右浮动样式 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 首页课程职业 开始 */
+.logo-left1 {
+    padding-right: 200px;
+    line-height  : 45px;
+}
+
+.logo-left1 li {
+    float    : left;
+    font-size: 24px;
+    color    : #050505;
+}
+
+.logo-left1 li:first-child {
+    margin-left: 75px;
+}
+
+.logo-left1 li:nth-child(2) {
+    margin: 0 55px;
+}
+
+/* 首页课程职业 结束 */
+
+/* 搜索框 开始 */
+.search input {
+    width       : 450px;
+    height      : 48px;
+    color       : #00a4ff;
+    padding-left: 14px;
+    font-size   : 18px;
+}
+
+.search img {
+    height: 48px;
+}
+
+/* 搜索框 结束 */
+
+/* 个人中心 开始 */
+
+
+.user span {
+    font-size: 16px;
+    color    : #666666;
+}
+
+.user img {
+    vertical-align: middle;
+    height        : 42px;
+}
+
+/* 个人中心 结束 */
+
+/* 清除浮动 开始*/
+.clearfix::before,
+.clearifx::after {
+    content: " ";
+    /* 表格不会继承父元素的任何东西 */
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    /*1倍缩放*/
+    *zoom: 1;
+}
+
+/* 清除浮动 结束*/
+
+
+/* 背景大图片 开始 */
+
+.box {
+    width           : 100%;
+    height          : 525px;
+    background      : skyblue;
+    background-image: url('../images/banner2.jpg');
+    /* 不平铺 */
+    background-repeat: no-repeat;
+    /* 铺满宽高 */
+    background-size: 100% 100%;
+}
+
+/* 版心 */
+.warpper {
+    width : 1500px;
+    margin: 0 auto;
+}
+
+/* 前端开发 开始 */
+.lis .fl {
+    width     : 230px;
+    height    : 525px;
+    padding   : 35px 25px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.lis .fl li {
+    width    : 175px;
+    height   : 50px;
+    color    : #fff;
+    font-size: 20px;
+
+}
+
+.lis .fl li span:first-child {
+    float: left;
+}
+
+.lis .fl li span:nth-child(2) {
+    float: right;
+}
+
+/* 课程开始 */
+.course {
+    height    : 400px;
+    width     : 285px;
+    margin-top: 65px;
+    background: #fff;
+
+}
+
+.course ul {
+    width : 255px;
+    height: 265px;
+}
+
+/* 我的课程表 开始 */
+.course-top {
+    height     : 60px;
+    line-height: 60px;
+    color      : #fff;
+    background : #9bcaea;
+    text-align : center;
+    font-size  : 26px;
+    font-weight: 700;
+}
+
+/* 我的课程表 结束 */
+
+
+/* 我的课程 开始 */
+.course-middle {
+    height : 310px;
+    width  : 255px;
+    padding: 20px 25px 0;
+    color  : #666666;
+}
+
+.course-middle li {
+    width: 230px;
+}
+
+.course-middle li:nth-child(2) {
+    border-top   : 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.course-middle li p {
+    display    : block;
+    font-size  : 22px;
+    padding-top: 15px;
+}
+
+.course-middle li span {
+    display       : block;
+    font-size     : 16px;
+    padding-top   : 10px;
+    padding-bottom: 20px;
+}
+
+/* 我的课程 结束 */
+
+/* 全部课程 开始 */
+.course-foot {
+    width     : 233px;
+    height    : 47px;
+    color     : #22b0ff;
+    border    : 1px solid #2288f6;
+    border-top: 1px solid #83b6ed;
+    text-align: center;
+}
+
+.course-foot h3 {
+    line-height: 47px;
+    font-size  : 24px;
+    font-weight: 400;
+}
+
+/* 全部课程 结束 */

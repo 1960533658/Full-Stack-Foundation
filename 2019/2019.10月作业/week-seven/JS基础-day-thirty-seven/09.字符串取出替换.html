@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 已知字符串："this is a test of java"
+        // (1) 取出子字符串"test"
+        // (2) 将'java'替换为'JAVASE'
+
+        //定义字符串
+        let str = "this is a test of java";
+        //拆分字符串
+        let str2 = str.split(' ')
+        //定义变量接收字符串test
+        let takeOut
+        // 遍历数组str2
+        for (let i = 1; i < str2.length; i++) {
+            // 比较是否等于test
+            if (str2[i] == 'test') {
+                //赋值给准备好的接收test的变量
+                takeOut = str2[i]
+            }
+            //判断是不是等于java
+            if (str2[i] == 'java') {
+                //修改str2的值为JAVASE
+                str2[i] = 'JAVASE'
+            }
+        }
+        //将数组重新拼接为字符串
+        str = str2.join(' ')
+        console.log(takeOut + '\n', str)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

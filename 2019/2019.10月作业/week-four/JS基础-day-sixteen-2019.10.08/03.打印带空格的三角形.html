@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //打印带空格的三角形
+        //五行最多九个递减两个
+        for(var i = 0;i<5;i++) {
+            //打印空格
+                for(var n = i;n<=5;n++) {
+                    document.write('&nbsp')
+                }
+                
+                
+                //打印*
+                for(var j = 8;j>=i*2;j--) {
+                    document.write('*');
+                }
+                document.write('<br />')
+        }
+    </script>
+</body>
+
+</html>

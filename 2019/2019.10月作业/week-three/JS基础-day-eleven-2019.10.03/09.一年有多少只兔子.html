@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 有个人想知道，一年之内一对兔子能繁殖多少对？
+        // 于是就筑了一道围墙把一对兔子关在里面。已知一对兔子
+        // 每个月可以生一对小兔子，而一对兔子从出生后第3个月起每月生一对小兔子。
+        // 假如一年内没有发生死亡现象，那么，一对兔子一年内（12个月
+        // ）能繁殖成多少对？ （不要看这些文字）这是著名的斐波那契数列
+        var num1 = 1;
+        var num2 = 1;
+        var sum = 0;
+        for(var i = 1;i<=10;i++) {
+            sum = num2;
+            num2+=num1;
+            num1 = sum
+        }
+        alert('一年以后有'+num2+'只')
+        console.log(i)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

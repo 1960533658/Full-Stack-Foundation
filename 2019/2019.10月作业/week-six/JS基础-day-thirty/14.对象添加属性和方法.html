@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 给下面的对象添加一个属性color,值是一个数组['red','black','white'], 在添加一个属性bark,值是一个方法
+        // var myDog = {
+        //     "name": "Happy Coder",
+        //     "legs": 4,
+        //     "tails": 1,
+        // }
+
+        //定义对象
+        var myDog = {
+            "name": "Happy Coder",
+            "legs": 4,
+            "tails": 1,
+        }
+        //添加属性
+        myDog.color = ['red', 'black', 'white'];
+        // 添加方法
+        myDog.bark = function () {
+            alert('汪汪汪')
+        }
+        console.log(myDog)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

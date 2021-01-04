@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 利用JavaScript编写程序，根据用户定义的运算符，如果是+号，则求出2个数的和；如果是-号，
+        // 则求出2个数的差；如果是*号，则求出2个数的积;如果是/号，则求出2个数的商；如果是%,求出
+        // 2给数的余数；否则打印输入有误。
+        var num1 = parseInt(prompt('请输入第一个输入字'));
+        var num2 = parseInt(prompt('请输入第二个输入字'));
+        var fu = prompt('请输入运算符');
+        var yu = 0;
+        if (fu == '+') {
+            fu = num1 + num2;
+            alert('2个数的和:' + fu)
+        } else if (fu == '-') {
+            fu = num1 - num2
+            alert('2个数的差:' + fu)
+        } else if (fu == '*') {
+            fu = num1 * num2
+            alert('2个数的积:' + fu)
+        } else if (fu == '/') {
+            fu = num1 / num2
+            alert('2个数的商:' + fu)
+        } else if (fu == '%') {
+            fu = num1 % num2
+            alert('2个数的余数:' + fu)
+        } else {
+            alert('打印有误')
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

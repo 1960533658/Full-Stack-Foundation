@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 输出2-200之间的所有素数（素数就是只能被1和其本身整除的数）
+        for (var i = 2; i <= 200; i++) {
+            //必须声明一个flag=true因为下面的flag= false会使素数同样转化为flag = false导致不通过
+            var flag = true;
+            for (var j = 2; j < i; j++) {
+                //判断当前数字书否被整除
+                if (i % j === 0) {
+                //只要进入判断式就改变他的值
+                    flag = false;
+                //只要进入循环,就会停掉循环,执行下一次的外部循环
+                    break;
+                }
+            }
+            if (flag == true) {
+                document.write(i + '<br />')
+            }
+
+        }
+
+        // function fn(m, n) {
+        //     var count = "";
+        //     for (i = m; i <= n; i++) {//第一次循环
+        //         var flage = true;//设一个标记
+        //         for (j = 2; j < i; j++) {
+        //             if (i % j === 0) {//第二次循环
+        //                 flage = false;//不满足条件改变标记，
+        //                 break;//跳出循环
+        //             }
+        //         }
+        //         if (flage) {//满足条件，也就是为true时
+        //             count += i + ","
+        //         }
+        //     }
+        //     return count
+        // }
+        // console.log(fn(100, 200)) //调用函数，输出值
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

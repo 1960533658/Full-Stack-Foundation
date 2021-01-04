@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 双伪元素清除浮动 */
+.clearfix::before,
+clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 版心 */
+.warper {
+    width : 1226px;
+    margin: 0 auto;
+}
+
+/* 登录导航开始 */
+.banner {
+    width     : 100%;
+    height    : 45px;
+    background: #333;
+}
+
+.banner ul li {
+    color      : #b0b0b0;
+    line-height: 45px;
+}
+
+.banner ul li a {
+    font-size: 12px;
+}
+
+.banner-left li {
+    float: left;
+}
+
+.banner-left li:nth-child(even) {
+    margin: 0 9px;
+}
+
+.banner-left li a {
+    color    : #b0b0b0;
+    font-size: 14px;
+}
+
+.banner-right li {
+    float: left;
+}
+
+.banner-right li a {
+    color    : #b0b0b0;
+    font-size: 14px;
+}
+
+.banner-right li:nth-child(2),
+.banner-right li:nth-child(4) {
+    margin: 0 9px;
+}
+
+.banner-right ul li span {
+    font-size    : 14px;
+    padding-right: 2px;
+}
+
+.banner-right li:last-child {
+    width       : 103px;
+    height      : 45px;
+    padding-left: 24px;
+    background  : #424242;
+}
+
+
+/* 登录导航 结束 */
+
+/* 商品推荐 开始 */
+.recommend {
+    margin-top : 25px;
+    line-height: 60px;
+}
+
+.recommend .logo {
+    width              : 60px;
+    height             : 60px;
+    margin-right       : 200px;
+    background-color   : #ff6700;
+    background-image   : url(../images/mi.png);
+    background-repeat  : no-repeat;
+    background-position: center;
+}
+
+.recommend .logo:hover {
+    background-image   : url(../images/house.png);
+    background-repeat  : no-repeat;
+    background-position: center;
+}
+
+.recommend .recommend-nav li {
+    float       : left;
+    margin-right: 22px;
+}
+
+.recommend .recommend-nav li:last-child {
+    margin-right: 0;
+}
+
+.recommend .recommend-nav li a {
+    font-size: 18px;
+}
+
+.recommend .search {
+    position: relative;
+}
+
+.recommend input {
+    width : 223px;
+    height: 50px;
+    border: 1px solid #ececec;
+}
+
+.recommend .gless {
+    text-align : center;
+    line-height: 50px;
+    width      : 52px;
+    height     : 50px;
+    border     : 1px solid #ececec;
+    border-left: 0px;
+    font-size  : 24px;
+    font-weight: 700;
+}
+
+.recommend .gless:hover {
+    background: #ff6700;
+}
+
+.recommend .pose {
+    position: absolute;
+    top     : -5px;
+    right   : 62px;
+}
+
+.recommend .pose span {
+    background: #eee;
+}
+
+.recommend .pose span:first-child {
+    margin-right: 9px;
+}
+
+/* 商品推荐 结束 */

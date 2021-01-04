@@ -1,0 +1,283 @@
+/* 顶部导航 开始 */
+.top-nav li {
+    display: inline-block;
+}
+
+.top-nav li:nth-child(even) {
+    margin: 0 8px;
+}
+
+.top-nav li a {
+    color      : #b0b0b0;
+    line-height: 40px;
+    font-size  : 12px;
+}
+
+/* 顶部导航 结束 */
+
+/* 分类导航 开始 */
+.type-nav {
+    margin-top   : 22px;
+    margin-bottom: 22px;
+}
+
+.type-nav .type-nav-imgs img {
+    height      : 55px;
+    margin-right: 30px;
+}
+
+.type-nav .type-nav-imgs img:nth-child(1) {
+    margin-right: 30px;
+}
+
+.type-nav .type li {
+    float       : left;
+    margin-right: 25px;
+}
+
+.type-nav .type li a {
+    font-size  : 16px;
+    color      : #333;
+    line-height: 55px;
+}
+
+/* 分类导航 结束 */
+
+/* 大背景图 开始 */
+.Tap {
+    height       : 500px;
+    margin-bottom: 14px;
+}
+
+.Tap .Tap-left {
+    width     : 235px;
+    height    : 500px;
+    padding   : 35px 25px 35px 30px;
+    background: #2c505f;
+}
+
+.Tap .Tap-left li {
+    display   : inline-block;
+    width     : 100%;
+    font-size : 16px;
+    margin-top: 30px;
+}
+
+.Tap .Tap-left li a {
+    color: #fff;
+}
+
+.Tap .Tap-left li:first-child {
+    margin-top: 0;
+}
+
+.Tap .Tap-left span {
+    float: right;
+    color: #96a8af;
+}
+
+.Tap .Tap-right {
+    float            : left;
+    width            : 985px;
+    height           : 500px;
+    background-image : url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size  : cover;
+}
+
+/* 大背景图 结束 */
+/* 任性空色块 开始 */
+.null {
+    margin-bottom: 66px;
+}
+
+.null img {
+    height      : 170px;
+    margin-right: 10px;
+}
+
+.null img:last-child {
+    margin-right: 0;
+}
+
+/* 任性空色块 结束 */
+
+/* 商品推荐 开始 */
+.bottom-banner {
+    width     : 100%;
+    height    : 785px;
+    background: #f5f5f5;
+}
+
+.shop {
+    margin-top: 80px;
+}
+
+.shop-top {
+    margin-bottom: 18px;
+
+}
+
+.shop-top span {
+    font-size  : 22px;
+    font-weight: 100;
+}
+
+.shop-top a {
+    margin-top  : 5px;
+    margin-right: 28px;
+    font-size   : 17px;
+}
+
+.shop-bottom-left {
+    margin-right: 14px;
+}
+
+.shop-bottom-right {
+    width: 976px;
+}
+
+.shop-bottom-right li {
+    float       : left;
+    margin-right: 14px;
+}
+
+.shop-bottom-right li:nth-child(4),
+.shop-bottom-right li:nth-child(8) {
+    margin-right: 0
+}
+
+.shop-bottom-right li:nth-child(1),
+.shop-bottom-right li:nth-child(2),
+.shop-bottom-right li:nth-child(3),
+.shop-bottom-right li:nth-child(4) {
+    margin-bottom: 14px;
+}
+
+.shop-bottom-right a {
+    display   : block;
+    width     : 233px;
+    height    : 300px;
+    background: #fff;
+    text-align: center;
+}
+
+.shop-bottom-right a p {
+    color      : #333;
+    font-size  : 14px;
+    line-height: 45px;
+}
+
+.shop-bottom-right a span {
+    font-size  : 13px;
+    line-height: 30px;
+    color      : #b0b0b0;
+}
+
+.shop-bottom-right a p:last-child {
+    font-size  : 14px;
+    line-height: 70px;
+    color      : #ff6700;
+}
+
+.shop-bottom-right li:nth-child(1),
+.shop-bottom-right li:nth-child(3),
+.shop-bottom-right li:nth-child(7) {
+    position: relative;
+}
+
+.shop-bottom-right li:nth-child(1)>span,
+.shop-bottom-right li:nth-child(3)>span,
+.shop-bottom-right li:nth-child(7)>span {
+    position   : absolute;
+    top        : 0;
+    left       : 50%;
+    margin-left: -34px;
+    height     : 20px;
+    width      : 64px;
+    text-align : center;
+    line-height: 20px;
+    color      : #fff;
+    background : #ffac13;
+}
+
+/* 商品推荐 结束 */
+.footer1 {
+    margin-top   : 60px;
+    margin-bottom: 40px;
+}
+
+.footer1-left {
+    height      : 155px;
+    width       : 930px;
+    border-right: 1px solid #ececec;
+
+}
+
+.footer1 ul {
+    float       : left;
+    margin-right: 105px;
+}
+
+.footer1 li {
+    color      : #757575;
+    font-size  : 12px;
+    line-height: 30px;
+}
+
+.footer1 ul li:first-child {
+    color        : #424242;
+    font-size    : 15px;
+    font-weight  : 700;
+    margin-bottom: 35px;
+}
+
+.footer1-right {
+    width     : 240px;
+    text-align: center;
+}
+
+.footer1-right p {
+    font-size: 13px;
+}
+
+.footer1-right p:first-child {
+    font-size: 21px;
+    color    : #ff6700;
+}
+
+.footer1-right p:nth-child(2) {
+    margin-top   : 12px;
+    margin-bottom: 12px;
+}
+
+.footer2 {
+    height     : 156px;
+    padding-top: 30px;
+
+    background: #fafafa;
+}
+
+.footer-right {
+    margin-top: 11px;
+}
+
+.footer-right P {
+    color      : #b0b0bb;
+    line-height: 15px;
+    font-size  : 13px;
+}
+
+.footer-right P:first-child {
+    font-size: 14px;
+    color    : #757575;
+}
+
+.bottom {
+    width      : 100%;
+    height     : 75px;
+    padding-top: 36px;
+    font-size  : 18px;
+    text-align : center;
+    color      : #bababa;
+}

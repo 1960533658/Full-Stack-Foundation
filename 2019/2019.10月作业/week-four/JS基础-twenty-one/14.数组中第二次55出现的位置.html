@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 在数组中 查询数据第二次55出现的位置,打印第二次出现的索引（
+        // 索引指从0开始）[11, 32，55, 47，55, 79，23]
+        //分析:
+        //遍历数组
+        //找到第二个55通过累计次数法
+        //输出i
+
+        //定义数组和累加变量
+        var arr = [11, 32, 55, 47, 55, 79, 23], cont = 0;
+        //遍历数组
+        for (var i = 0; i < arr.length; i++) {
+            // 判断
+            if (arr[i] == 55) {
+                //累加
+                cont++;
+                //判断cont的值
+                if (cont==2) {
+                    // 打印
+                    console.log(i)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

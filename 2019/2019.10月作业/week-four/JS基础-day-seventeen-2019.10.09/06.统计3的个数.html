@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 你要做的是统计出100到200之间的整数一共有多少个3。 解释：例如101中没有3；103中有一个3；133中有两个3。
+        //分析:
+        //1.找到100-200之间所有的数
+        //检查这个数有几个三
+        //输出个数
+
+        //计量个数
+        var count = 0;
+        //循环遍历100-200
+        for (var i = 100; i <= 200; i++) {
+            // 3.拆分数字
+            var gw = i % 10;
+            var sw = parseInt(i / 10 % 10);
+            var bw = parseInt(i / 100);
+            // 4.判断各个位上是否是3是 就让计数变量+1
+            if (gw === 3) {
+                count++;
+            }
+
+            if (sw === 3) {
+                count++;
+            }
+
+            if (bw === 3) {
+                count++;
+            }
+        }
+        // 5.输出计数变量的值
+        console.log(count);
+    </script>
+</body>
+
+</html>

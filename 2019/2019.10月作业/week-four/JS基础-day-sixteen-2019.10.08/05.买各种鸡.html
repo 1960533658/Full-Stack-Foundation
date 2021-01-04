@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 5.	5文钱可以买一只公鸡，3文钱可以买一只母鸡，1文钱可以买3只雏鸡。现在用
+        // 100文钱买100只鸡，那么各有公鸡、母鸡、雏鸡多少只？
+        var money = 100,num=100;
+        //🐓
+        for(var i = 1;i<=100;i++) {
+            //母鸡
+            for(var j = 1;j<=100;j++) {
+                //🐥
+                for(var k  =1;k<=100;k++) {
+                    if(i+j+k==100&&5*i+3*j+k/3==100) {
+                        alert('公鸡：'+i+'只'+'母鸡:'+j+'只'+'雏鸡:'+k+'只')
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

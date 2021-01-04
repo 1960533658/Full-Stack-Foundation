@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.录入月份，输出对应的季节
+        //     (1)键盘录入一个整数(代表月份, 范围1 - 12)
+        //         (2)输出该月份对应的季节
+        // 3, 4, 5春季
+        // 6, 7, 8夏季
+        // 9, 10, 11秋季
+        // 12, 1, 2冬季
+        //     (3)演示格式如下:
+        // 请输入一个月份: 3
+        // 控制台输出: 3月份是春季"
+
+        //接收月份
+        let month = prompt('请输入月份') - 0;
+        //3-5之间是春天
+        if (month <= 5 && month >= 3) {
+            alert(month + '月份是春季')
+            //6-8之间是夏天
+        } else if (month >= 6 && month <= 8) {
+            alert(month + '月份是夏季')
+            // 9-11之间是秋天
+        } else if (month >= 9 && month <= 11) {
+            alert(month + '月份是秋季')
+            //12,1,2是冬天,不能使用曲间判断,因为他们不是按照数学顺序的值排列的
+        } else if (month == 12 || month == 1 || month == 2) {
+            alert(month + '月份是冬季')
+
+        } else {
+            alert('请输入正确的月份')
+        }
+    </script>
+</body>
+
+</html>

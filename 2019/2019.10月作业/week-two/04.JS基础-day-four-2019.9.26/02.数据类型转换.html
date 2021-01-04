@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 2.数据类型的相互转换:
+        Number(true)  // 1
+        Number(false) // 2
+        Number(" ") // 0
+        Number( [] ) // 0
+        Number(['1','2']) //    NaN
+        Number([1]) // 1
+        Number({})   //NaN
+        Number({a:1}) // ?
+        Number("3.14") //3.14
+        Number(null) // 0
+        Number(undefined) //NaN
+        Number("12456aaaa") //NaN
+        String({}) // ?Object
+        String([]) // ""
+        String(123) //'123'
+        String(false) //"false"
+        String(null) //"null"
+        String(undefined) //"undefined"
+        undefined.toString() //报错
+        null.toString()  //报错
+        Boolean(0) // false
+        Boolean("") //false
+        Boolean(undefined) //false
+        Boolean(null) //false
+        Boolean(NaN) //false
+        Boolean({}) // true
+        Boolean([])  // true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

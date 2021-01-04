@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //  写一个函数，输入某年某月某日，判断这一天是一年中的第几天   1998  3   1
+        //字面量定义函数
+        function getDays() {
+            //接收年月日
+            var year = prompt("年") - 0;
+            var month = prompt("月") - 0;
+            var day = prompt("日") - 0;
+            //判断是否是闰年,用以改变二月份的值
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                var two = 29;
+            } else {
+                var two = 28;
+            }
+            // 定义接收天数的变量
+            var sum = 0;
+            //遍历月份根据月份的不同相加不同的天数
+            for (var i = 1; i < month; i++) {
+                if (i == 1 || i == 3 || i == 5 || i == 7 || i == 8 || i == 10 || i == 12) {
+                    sum += 31;
+                }
+                if (i == 4 || i == 6 || i == 9 || i == 11) {
+                    sum += 30;
+                }
+                if (i == 2) {
+                    sum += two;
+                }
+            }
+            //加上日的值
+            sum += day
+            //返回天数
+            return ("第" + sum + "天")
+        }
+        //接收天数
+        var days = getDays()
+        //打印天数
+        console.log(days)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

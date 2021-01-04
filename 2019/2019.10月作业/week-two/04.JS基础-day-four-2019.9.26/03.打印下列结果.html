@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 3. 将下列结果打印出来下面的题的结果
+        var num1 = 123;
+        var num2 ="123"
+        console.log(num1+num2)  
+        // "123123",字符与任何值相加都会拼接
+        console.log(num1 + +num2)  
+        // 246,+对字符串会将其转数字类型
+        console.log(num1 + !! num2)  
+        // 124,!!转布尔值!!num2=1
+        console.log(num1+Number(num2))  
+        // 246,num2转成number类型
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

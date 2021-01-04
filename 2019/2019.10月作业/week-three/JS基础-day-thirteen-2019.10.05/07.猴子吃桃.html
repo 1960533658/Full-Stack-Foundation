@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 猴子偷桃  第一天吃一半+1个，第二天吃剩下的一半+1个，以后都吃剩下的一半+1个 
+        // 到第10天只剩一个了 问第一天摘了多少桃子？
+        var nine = (1+1)*2
+        var first = 0;
+        //规律:(1+1)*2=上一天的总数量
+        for(var i= 8;i>=1;i--) {
+            nine = (nine+1)*2
+        }
+        alert(nine)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 2、一个数如果恰好等于它的因子之和，这个数就称为 "完
+        // 数 "。 例如6=1＋2＋3.编程 找出100以内的所有完数。
+
+        //遍历2-100之间所有的数字
+        for (var i = 1; i <= 1000; i++) {
+            //定义变量接收每一个因子的和
+            var sum = 0;
+            //遍历i之前所有的数字
+            for (var j = 1; j < i; j++) {
+                //判断断i%j是否可以整除
+                if (i % j == 0) {
+                    //因子和相加
+                    sum += j
+                }
+            }
+            //判断这个数的因子和是否相等于原数
+            if (sum == i) {
+                // 打印
+                document.write(i + '<br />')
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
